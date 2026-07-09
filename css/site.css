@@ -1,0 +1,719 @@
+/* global box-sizing reset (was provided by the bundler shell in the mockup) */
+*, *::before, *::after { box-sizing: border-box; }
+/* Marketing website UI kit styles.
+   Builds on ../../colors_and_type.css for tokens.
+   Component-level CSS lives here so JSX can stay clean.
+*/
+/* =========================================================================
+   Alpha One Garage Doors — Foundations
+   Colors + Type tokens. Import this CSS first; everything else builds on it.
+   ========================================================================= */
+
+/* Webfonts — Google Fonts substitutions for the logo's custom techno-industrial
+   face. See README "VISUAL FOUNDATIONS" for the flag on this. */
+/* vietnamese */
+
+/* latin-ext */
+
+/* latin */
+
+/* vietnamese */
+
+/* latin-ext */
+
+/* latin */
+
+/* vietnamese */
+
+/* latin-ext */
+
+/* latin */
+
+/* vietnamese */
+
+/* latin-ext */
+
+/* latin */
+
+/* vietnamese */
+
+/* latin-ext */
+
+/* latin */
+
+/* vietnamese */
+
+/* latin-ext */
+
+/* latin */
+
+/* vietnamese */
+
+/* latin-ext */
+
+/* latin */
+
+/* vietnamese */
+
+/* latin-ext */
+
+/* latin */
+
+/* vietnamese */
+
+/* latin-ext */
+
+/* latin */
+
+/* vietnamese */
+
+/* latin-ext */
+
+/* latin */
+
+/* cyrillic-ext */
+
+/* cyrillic */
+
+/* greek */
+
+/* vietnamese */
+
+/* latin-ext */
+
+/* latin */
+
+/* cyrillic-ext */
+
+/* cyrillic */
+
+/* greek */
+
+/* vietnamese */
+
+/* latin-ext */
+
+/* latin */
+
+/* cyrillic-ext */
+
+/* cyrillic */
+
+/* greek */
+
+/* vietnamese */
+
+/* latin-ext */
+
+/* latin */
+
+/* vietnamese */
+
+/* latin-ext */
+
+/* latin */
+
+/* vietnamese */
+
+/* latin-ext */
+
+/* latin */
+
+/* vietnamese */
+
+/* latin-ext */
+
+/* latin */
+
+/* vietnamese */
+
+/* latin-ext */
+
+/* latin */
+
+/* vietnamese */
+
+/* latin-ext */
+
+/* latin */
+
+/* vietnamese */
+
+/* latin-ext */
+
+/* latin */
+
+
+
+:root {
+  /* ---------- COLORS ---------- */
+
+  /* Primary — the "Garage Black" pulled from the logo. Used for headers,
+     primary surfaces, footers, large display type. */
+  --color-ink-900:        #0B0B0C;   /* near-black, brand primary */
+  --color-ink-800:        #16181B;   /* hero / nav background */
+  --color-ink-700:        #1F2227;   /* card on dark, raised surface on ink */
+  --color-ink-600:        #2C3035;   /* hairlines on dark */
+
+  /* Neutrals — warm "concrete & steel" grays. Slightly cool to feel industrial,
+     not papery. */
+  --color-steel-500:      #5B6066;   /* secondary text on light */
+  --color-steel-400:      #8A8F95;   /* tertiary text, captions */
+  --color-steel-300:      #C2C5C8;   /* borders, dividers */
+  --color-steel-200:      #E2E3E5;   /* subtle bg, input borders */
+  --color-steel-100:      #F0F0EF;   /* card surface, alt rows */
+  --color-bone:           #F7F5F1;   /* warm off-white page bg */
+  --color-paper:          #FFFFFF;
+
+  /* Brand — Safety Red. The accent. Use sparingly: CTAs, emergency badges,
+     phone numbers, the "open NOW" pip, big numerals like "24/7". */
+  --color-red-700:        #8A0F1F;
+  --color-red-600:        #B5111F;   /* hover / pressed */
+  --color-red-500:        #D11F2C;   /* primary brand red */
+  --color-red-400:        #E5424E;
+  --color-red-50:         #FDECEE;   /* red-tinted background wash */
+
+  /* Caution Yellow — secondary accent. Use for "before you DIY" warnings,
+     ratings/stars, highlight strips, hazard-stripe motifs. NOT for body text. */
+  --color-yellow-600:     #E0A800;
+  --color-yellow-500:     #F2B700;   /* signage yellow */
+  --color-yellow-400:     #FFD24A;
+  --color-yellow-50:      #FFF6D6;
+
+  /* Trust Green — only for "success", "online", "we're open" status pips.
+     Not a brand color. Don't use for marketing. */
+  --color-green-600:      #2E7D3E;
+  --color-green-500:      #3FA756;
+  --color-green-50:       #E7F5EA;
+
+  /* ---------- SEMANTIC ---------- */
+  --bg-page:              var(--color-bone);
+  --bg-surface:           var(--color-paper);
+  --bg-surface-alt:       var(--color-steel-100);
+  --bg-inverse:           var(--color-ink-900);
+  --bg-inverse-alt:       var(--color-ink-800);
+
+  --fg-default:           var(--color-ink-900);
+  --fg-muted:             var(--color-steel-500);
+  --fg-subtle:            var(--color-steel-400);
+  --fg-inverse:           var(--color-paper);
+  --fg-inverse-muted:     #B6B9BD;
+  --fg-brand:             var(--color-red-500);
+
+  --border-default:       var(--color-steel-300);
+  --border-subtle:        var(--color-steel-200);
+  --border-strong:        var(--color-ink-900);
+  --border-inverse:       var(--color-ink-600);
+
+  --accent:               var(--color-red-500);
+  --accent-hover:         var(--color-red-600);
+  --accent-pressed:       var(--color-red-700);
+  --warning:              var(--color-yellow-500);
+  --success:              var(--color-green-500);
+
+  /* ---------- TYPE ---------- */
+  --font-display:         "Saira", "Bank Gothic", "Trade Gothic", system-ui, sans-serif;
+  --font-body:            "Barlow", "Helvetica Neue", Arial, sans-serif;
+  --font-condensed:       "Barlow Condensed", "Oswald", "Impact", sans-serif;
+  --font-mono:            "JetBrains Mono", ui-monospace, "SF Mono", Menlo, monospace;
+
+  /* Type scale — masculine = tight tracking on body, WIDE tracking on
+     display caps (industrial signage feel). */
+  --fs-display-xl:        clamp(56px, 9vw, 128px);  /* @kind font */
+  --fs-display-lg:        clamp(44px, 6vw, 88px);   /* @kind font */
+  --fs-display-md:        clamp(36px, 4.5vw, 64px); /* @kind font */
+  --fs-h1:                clamp(32px, 3.5vw, 48px);  /* @kind font */
+  --fs-h2:                clamp(26px, 2.6vw, 36px);  /* @kind font */
+  --fs-h3:                22px;  /* @kind font */
+  --fs-h4:                18px;  /* @kind font */
+  --fs-body-lg:           18px;  /* @kind font */
+  --fs-body:              16px;  /* @kind font */
+  --fs-body-sm:           14px;  /* @kind font */
+  --fs-caption:           12px;  /* @kind font */
+  --fs-eyebrow:           13px;  /* @kind font */
+
+  --lh-tight:             1.05;  /* @kind font */
+  --lh-snug:              1.2;   /* @kind font */
+  --lh-normal:            1.5;   /* @kind font */
+  --lh-loose:             1.7;   /* @kind font */
+
+  --tracking-tight:       -0.01em;  /* @kind font */
+  --tracking-normal:      0;        /* @kind font */
+  --tracking-wide:        0.04em;   /* @kind font */
+  --tracking-wider:       0.12em;   /* @kind font */ /* eyebrows, button labels */
+  --tracking-widest:      0.22em;   /* @kind font */ /* big display caps, section headers */
+
+  /* ---------- SPACING ---------- */
+  --space-1:              4px;
+  --space-2:              8px;
+  --space-3:              12px;
+  --space-4:              16px;
+  --space-5:              24px;
+  --space-6:              32px;
+  --space-7:              48px;
+  --space-8:              64px;
+  --space-9:              96px;
+  --space-10:             128px;
+
+  /* ---------- RADII ---------- */
+  /* Mostly square / barely-rounded. Industrial. Pills allowed for badges/tags. */
+  --radius-none:          0;
+  --radius-sm:            2px;
+  --radius-md:            4px;
+  --radius-lg:            8px;
+  --radius-pill:          999px;
+
+  /* ---------- SHADOWS / ELEVATION ---------- */
+  /* Hard, slightly offset, low-spread. Reads like a printed sign, not a SaaS card. */
+  --shadow-card:          0 1px 0 rgba(11,11,12,.04), 0 2px 6px rgba(11,11,12,.06);
+  --shadow-card-hover:    0 1px 0 rgba(11,11,12,.06), 0 8px 20px rgba(11,11,12,.10);
+  --shadow-stamp:         4px 4px 0 var(--color-ink-900);   /* "stamped" cards */
+  --shadow-stamp-red:     4px 4px 0 var(--color-red-500);
+
+  /* ---------- MOTION ---------- */
+  --ease-out:             cubic-bezier(.2,.7,.2,1);  /* @kind other */
+  --ease-in:              cubic-bezier(.6,0,.8,.2);  /* @kind other */
+  --dur-fast:             120ms;  /* @kind other */
+  --dur-normal:           200ms;  /* @kind other */
+  --dur-slow:             320ms;  /* @kind other */
+}
+
+/* =========================================================================
+   SEMANTIC ELEMENT STYLES
+   You can wrap content in `.aogd` (or set it on <body>) to get the brand
+   defaults without polluting global selectors.
+   ========================================================================= */
+.aogd {
+  font-family: var(--font-body);
+  font-size: var(--fs-body);
+  line-height: var(--lh-normal);
+  color: var(--fg-default);
+  background: var(--bg-page);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+.aogd .display,
+.aogd h1.display { font-family: var(--font-display); font-weight: 800; font-size: var(--fs-display-lg); line-height: var(--lh-tight); letter-spacing: var(--tracking-tight); text-transform: uppercase; }
+
+.aogd h1 { font-family: var(--font-display); font-weight: 800; font-size: var(--fs-h1); line-height: var(--lh-snug); letter-spacing: var(--tracking-tight); text-transform: uppercase; margin: 0; }
+.aogd h2 { font-family: var(--font-display); font-weight: 700; font-size: var(--fs-h2); line-height: var(--lh-snug); letter-spacing: var(--tracking-normal); text-transform: uppercase; margin: 0; }
+.aogd h3 { font-family: var(--font-display); font-weight: 700; font-size: var(--fs-h3); line-height: var(--lh-snug); margin: 0; }
+.aogd h4 { font-family: var(--font-body); font-weight: 700; font-size: var(--fs-h4); line-height: var(--lh-snug); margin: 0; }
+
+.aogd .eyebrow { font-family: var(--font-display); font-weight: 700; font-size: var(--fs-eyebrow); letter-spacing: var(--tracking-widest); text-transform: uppercase; color: var(--color-red-500); }
+.aogd .overline { font-family: var(--font-body); font-weight: 600; font-size: var(--fs-caption); letter-spacing: var(--tracking-wider); text-transform: uppercase; color: var(--fg-muted); }
+
+.aogd p { font-family: var(--font-body); font-size: var(--fs-body); line-height: var(--lh-normal); margin: 0; text-wrap: pretty; }
+.aogd p.lede { font-size: var(--fs-body-lg); line-height: var(--lh-normal); color: var(--fg-default); }
+.aogd small, .aogd .caption { font-size: var(--fs-caption); color: var(--fg-muted); }
+
+.aogd a { color: inherit; text-decoration: underline; text-underline-offset: 3px; text-decoration-thickness: 1.5px; }
+.aogd a:hover { color: var(--accent); }
+
+.aogd code, .aogd .mono { font-family: var(--font-mono); font-size: 0.9em; }
+.aogd strong, .aogd b { font-weight: 700; }
+
+/* Big industrial number — e.g. "24/7", phone-number hero, year-counter. */
+.aogd .numeral { font-family: var(--font-display); font-weight: 900; font-feature-settings: "tnum" 1; letter-spacing: -0.02em; line-height: 1; }
+
+/* Hazard-stripe utility — the yellow/black caution-tape motif used as a
+   divider strip or a banner border. */
+.aogd .hazard-stripe {
+  background-image: repeating-linear-gradient(
+    -45deg,
+    var(--color-yellow-500) 0 16px,
+    var(--color-ink-900) 16px 32px
+  );
+}
+
+
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; background: var(--bg-page); color: var(--fg-default); font-family: var(--font-body); -webkit-font-smoothing: antialiased; }
+img { max-width: 100%; display: block; }
+button { font-family: inherit; }
+a { color: inherit; }
+
+/* -------------------------------------------------------------------------
+   Primitives
+   ------------------------------------------------------------------------- */
+
+.container { max-width: 1240px; margin: 0 auto; padding: 0 32px; }
+
+.btn { display: inline-flex; align-items: center; gap: 10px; font-family: var(--font-display); font-weight: 700; font-size: 14px; letter-spacing: 0.18em; text-transform: uppercase; padding: 16px 26px; border: 0; border-radius: 2px; cursor: pointer; line-height: 1; transition: transform var(--dur-fast) var(--ease-out), box-shadow var(--dur-fast) var(--ease-out), background var(--dur-fast) var(--ease-out); text-decoration: none; }
+.btn svg { width: 18px; height: 18px; }
+.btn--primary { background: var(--color-red-500); color: #fff; box-shadow: 4px 4px 0 var(--color-ink-900); }
+.btn--primary:hover { background: var(--color-red-600); }
+.btn--primary:active { transform: translate(2px, 2px); box-shadow: 0 0 0 var(--color-ink-900); }
+.btn--secondary { background: var(--color-ink-900); color: #fff; border: 2px solid var(--color-ink-900); }
+.btn--secondary:hover { background: var(--color-ink-800); }
+.btn--ghost { background: transparent; color: var(--color-ink-900); border: 2px solid var(--color-ink-900); }
+.btn--ghost:hover { background: var(--color-ink-900); color: #fff; }
+.btn--ghost-light { background: transparent; color: #fff; border: 2px solid #fff; }
+.btn--ghost-light:hover { background: #fff; color: var(--color-ink-900); }
+.btn--call { background: #fff; color: var(--color-ink-900); border: 2px solid var(--color-ink-900); box-shadow: 4px 4px 0 var(--color-red-500); }
+.btn--call:hover { box-shadow: 2px 2px 0 var(--color-red-500); transform: translate(2px, 2px); }
+.btn--sm { padding: 10px 16px; font-size: 12px; }
+.btn--inline { padding: 0; background: transparent; box-shadow: none; border: 0; color: var(--color-red-500); }
+
+.badge { display: inline-flex; align-items: center; gap: 6px; font-family: var(--font-display); font-weight: 700; font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; padding: 6px 12px; border-radius: 999px; line-height: 1; white-space: nowrap; }
+.badge--emergency { background: var(--color-red-500); color: #fff; }
+.badge--ink { background: var(--color-ink-900); color: #fff; }
+.badge--yellow { background: var(--color-yellow-500); color: var(--color-ink-900); }
+.badge--outline { background: transparent; color: var(--color-ink-900); border: 1.5px solid var(--color-ink-900); }
+.badge--outline-light { background: transparent; color: #fff; border: 1.5px solid rgba(255,255,255,.4); }
+.badge--open { background: rgba(63,167,86,.16); color: #C7E8CF; }
+.badge--open .pip { width: 7px; height: 7px; border-radius: 999px; background: var(--color-green-500); }
+
+.section { padding: 96px 0; }
+.section--tight { padding: 64px 0; }
+.section--dark { background: var(--color-ink-900); color: #fff; }
+.section--bone { background: var(--color-bone); }
+
+.section-head { margin-bottom: 48px; max-width: 760px; }
+.section-head .eyebrow { display: inline-flex; align-items: center; gap: 12px; font-family: var(--font-display); font-weight: 700; font-size: 13px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--color-red-500); margin-bottom: 16px; }
+.section-head .eyebrow::before { content: ""; width: 32px; height: 3px; background: var(--color-red-500); }
+.section-head h2 { font-family: var(--font-display); font-weight: 800; font-size: clamp(34px, 4.2vw, 56px); line-height: 1.05; letter-spacing: -0.01em; text-transform: uppercase; margin: 0 0 16px; color: inherit; }
+.section-head p { font-family: var(--font-body); font-size: 18px; line-height: 1.5; color: var(--fg-muted); margin: 0; text-wrap: pretty; max-width: 60ch; }
+.section--dark .section-head p { color: #B6B9BD; }
+
+.photo-slot { position: relative; background: linear-gradient(135deg, #C2C5C8 0%, #8A8F95 100%); display: flex; align-items: center; justify-content: center; overflow: hidden; }
+.photo-slot::after { content: attr(data-label); position: absolute; bottom: 12px; left: 14px; font-family: var(--font-mono); font-size: 11px; color: rgba(255,255,255,.85); background: rgba(11,11,12,.4); padding: 4px 8px; border-radius: 2px; letter-spacing: 0.05em; }
+
+/* Hazard-stripe utility */
+.hazard-stripe { background-image: repeating-linear-gradient(-45deg, var(--color-yellow-500) 0 14px, var(--color-ink-900) 14px 28px); }
+
+/* -------------------------------------------------------------------------
+   Emergency banner
+   ------------------------------------------------------------------------- */
+
+.emerg { background: var(--color-ink-900); color: #fff; padding: 12px 32px; display: flex; align-items: center; gap: 18px; }
+.emerg__pulse { width: 10px; height: 10px; border-radius: 999px; background: var(--color-red-500); box-shadow: 0 0 0 4px rgba(209,31,44,.25); flex: 0 0 auto; animation: pulse 2s var(--ease-out) infinite; }
+.emerg__lede { font-family: var(--font-display); font-weight: 700; font-size: 12px; letter-spacing: 0.22em; text-transform: uppercase; }
+.emerg__lede .accent { color: var(--color-red-500); margin-right: 6px; }
+.emerg__spacer { flex: 1; }
+.emerg__phone { display: inline-flex; align-items: center; gap: 8px; font-family: var(--font-display); font-weight: 800; font-size: 18px; letter-spacing: 0.04em; color: #fff; text-decoration: none; white-space: nowrap; }
+.emerg__phone svg { width: 18px; height: 18px; stroke: var(--color-red-500); }
+.emerg__phone:hover { color: var(--color-red-400); }
+.emerg__stripe { height: 6px; }
+
+@keyframes pulse {
+  0%, 100% { box-shadow: 0 0 0 4px rgba(209,31,44,.25); }
+  50% { box-shadow: 0 0 0 8px rgba(209,31,44,.05); }
+}
+
+/* -------------------------------------------------------------------------
+   Site header
+   ------------------------------------------------------------------------- */
+
+.header { position: sticky; top: 0; z-index: 50; background: #fff; border-bottom: 1px solid var(--border-subtle); }
+.header__inner { display: flex; align-items: center; gap: 32px; padding: 18px 32px; max-width: 1340px; margin: 0 auto; }
+.header__logo { display: flex; align-items: center; }
+.header__logo img { height: 44px; width: auto; }
+.header__nav { display: flex; gap: 30px; flex: 1; justify-content: center; }
+.header__nav a { font-family: var(--font-display); font-weight: 700; font-size: 13px; letter-spacing: 0.18em; text-transform: uppercase; text-decoration: none; color: var(--color-ink-900); padding: 6px 0; border-bottom: 2px solid transparent; transition: border-color var(--dur-fast); cursor: pointer; }
+.header__nav a:hover, .header__nav a.is-active { border-bottom-color: var(--color-red-500); color: var(--color-ink-900); }
+.header__cta { display: flex; align-items: center; gap: 12px; }
+.header__phone { display: flex; align-items: center; gap: 8px; font-family: var(--font-display); font-weight: 700; font-size: 15px; color: var(--color-ink-900); text-decoration: none; }
+.header__phone svg { width: 16px; height: 16px; stroke: var(--color-red-500); }
+.header__phone span { letter-spacing: 0.04em; }
+.header__phone-label { display: block; font-size: 10px; letter-spacing: 0.22em; color: var(--fg-muted); margin-bottom: 2px; }
+
+/* -------------------------------------------------------------------------
+   Hero
+   ------------------------------------------------------------------------- */
+
+.hero { position: relative; background: var(--color-ink-900); color: #fff; min-height: 720px; display: flex; align-items: center; overflow: hidden; }
+.hero__photo { position: absolute; inset: 0; }
+.hero__photo .photo-slot { width: 100%; height: 100%; background: linear-gradient(135deg, #3a3d40 0%, #1a1c1f 100%); }
+.hero__scrim { position: absolute; inset: 0; background: linear-gradient(90deg, rgba(11,11,12,.92) 0%, rgba(11,11,12,.7) 45%, rgba(11,11,12,.4) 100%); }
+.hero__inner { position: relative; z-index: 2; max-width: 1240px; margin: 0 auto; padding: 80px 32px; width: 100%; }
+.hero__eyebrow { display: inline-flex; align-items: center; gap: 12px; font-family: var(--font-display); font-weight: 700; font-size: 13px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--color-red-500); margin-bottom: 24px; }
+.hero__eyebrow::before { content: ""; width: 36px; height: 3px; background: var(--color-red-500); }
+.hero h1 { font-family: var(--font-display); font-weight: 800; font-size: clamp(48px, 7vw, 104px); line-height: 0.95; letter-spacing: -0.015em; text-transform: uppercase; margin: 0 0 28px; max-width: 14ch; }
+.hero h1 em { font-style: normal; color: var(--color-red-500); }
+.hero__lede { font-family: var(--font-body); font-weight: 400; font-size: 20px; line-height: 1.45; color: #D8DADD; max-width: 56ch; margin: 0 0 40px; }
+.hero__ctas { display: flex; gap: 14px; flex-wrap: wrap; margin-bottom: 56px; }
+.hero__proof { display: flex; gap: 36px; flex-wrap: wrap; padding-top: 24px; border-top: 1px solid rgba(255,255,255,.15); max-width: 720px; }
+.hero__proof-item { display: flex; flex-direction: column; gap: 4px; }
+.hero__proof-item .n { font-family: var(--font-display); font-weight: 900; font-size: 36px; line-height: 1; color: #fff; letter-spacing: -0.02em; }
+.hero__proof-item .n .acc { color: var(--color-red-500); }
+.hero__proof-item .l { font-family: var(--font-display); font-weight: 600; font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase; color: #B6B9BD; }
+
+.hero__stamp { position: absolute; right: 48px; bottom: 48px; z-index: 2; width: 140px; height: 140px; border: 2px solid var(--color-yellow-500); border-radius: 999px; display: flex; flex-direction: column; align-items: center; justify-content: center; color: var(--color-yellow-500); transform: rotate(-8deg); font-family: var(--font-display); font-weight: 700; text-transform: uppercase; text-align: center; line-height: 1.1; }
+.hero__stamp .big { font-size: 36px; font-weight: 900; letter-spacing: -0.02em; line-height: 1; margin: 2px 0; }
+.hero__stamp .sm { font-size: 9px; letter-spacing: 0.22em; }
+
+/* -------------------------------------------------------------------------
+   Trust strip
+   ------------------------------------------------------------------------- */
+
+.trust { background: var(--color-paper); border-bottom: 1px solid var(--border-subtle); }
+.trust__row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; }
+.trust__item { display: flex; align-items: center; gap: 14px; padding: 24px 28px; border-right: 1px solid var(--border-subtle); }
+.trust__item:last-child { border-right: 0; }
+.trust__item svg { width: 28px; height: 28px; stroke: var(--color-red-500); stroke-width: 1.75; flex: 0 0 auto; }
+.trust__item .l1 { font-family: var(--font-display); font-weight: 700; font-size: 14px; letter-spacing: 0.04em; text-transform: uppercase; color: var(--color-ink-900); line-height: 1; }
+.trust__item .l2 { font-family: var(--font-body); font-size: 12px; color: var(--fg-muted); line-height: 1; margin-top: 4px; }
+
+/* -------------------------------------------------------------------------
+   Services grid
+   ------------------------------------------------------------------------- */
+
+.services__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+.service-card { background: #fff; border: 2px solid var(--color-ink-900); border-radius: 4px; box-shadow: 4px 4px 0 var(--color-ink-900); padding: 0; display: flex; flex-direction: column; transition: transform var(--dur-fast), box-shadow var(--dur-fast); cursor: pointer; overflow: hidden; }
+.service-card:hover { transform: translate(-2px, -2px); box-shadow: 6px 6px 0 var(--color-red-500); }
+.service-card .photo { aspect-ratio: 4/3; }
+.service-card .body { padding: 28px; display: flex; flex-direction: column; gap: 14px; flex: 1; }
+.service-card .icon { width: 48px; height: 48px; display: flex; align-items: center; justify-content: center; background: var(--color-ink-900); color: var(--color-yellow-500); border-radius: 2px; margin-bottom: 4px; }
+.service-card .icon svg { width: 26px; height: 26px; stroke-width: 1.75; }
+.service-card h3 { font-family: var(--font-display); font-weight: 800; font-size: 24px; letter-spacing: 0; text-transform: uppercase; line-height: 1.05; margin: 0; color: var(--color-ink-900); }
+.service-card p { font-family: var(--font-body); font-size: 14px; line-height: 1.5; color: var(--fg-muted); margin: 0; flex: 1; }
+.service-card .link { font-family: var(--font-display); font-weight: 700; font-size: 12px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--color-red-500); display: inline-flex; align-items: center; gap: 8px; padding-top: 8px; border-top: 1px solid var(--border-subtle); }
+.service-card .link svg { width: 14px; height: 14px; }
+
+/* -------------------------------------------------------------------------
+   Pillars (How We Work)
+   ------------------------------------------------------------------------- */
+
+.pillars { display: grid; grid-template-columns: 1.2fr 1fr; gap: 64px; align-items: stretch; }
+.pillars__photo { aspect-ratio: 4/5; min-height: 480px; border-radius: 4px; }
+.pillars__list { display: flex; flex-direction: column; gap: 28px; }
+.pillar { display: grid; grid-template-columns: 64px 1fr; gap: 20px; padding-bottom: 28px; border-bottom: 1px solid var(--border-subtle); }
+.pillar:last-child { border-bottom: 0; padding-bottom: 0; }
+.pillar__n { font-family: var(--font-display); font-weight: 900; font-size: 44px; line-height: 1; color: var(--color-red-500); letter-spacing: -0.02em; }
+.pillar h3 { font-family: var(--font-display); font-weight: 800; font-size: 22px; letter-spacing: 0.02em; text-transform: uppercase; margin: 0 0 8px; color: var(--color-ink-900); }
+.pillar p { font-family: var(--font-body); font-size: 15px; line-height: 1.55; color: var(--fg-muted); margin: 0; }
+
+/* -------------------------------------------------------------------------
+   Emergency CTA band
+   ------------------------------------------------------------------------- */
+
+.cta-band { background: var(--color-red-500); color: #fff; padding: 64px 0; position: relative; }
+.cta-band__inner { display: grid; grid-template-columns: 1.4fr 1fr; gap: 40px; align-items: center; }
+.cta-band h2 { font-family: var(--font-display); font-weight: 800; font-size: clamp(36px, 4.5vw, 56px); line-height: 1; letter-spacing: -0.01em; text-transform: uppercase; margin: 0 0 14px; }
+.cta-band p { font-family: var(--font-body); font-size: 18px; line-height: 1.45; color: rgba(255,255,255,.85); margin: 0; max-width: 50ch; }
+.cta-band .phone-block { text-align: right; }
+.cta-band .phone-block .l { font-family: var(--font-display); font-weight: 700; font-size: 13px; letter-spacing: 0.22em; text-transform: uppercase; opacity: 0.85; }
+.cta-band .phone-block .n { font-family: var(--font-display); font-weight: 900; font-size: clamp(36px, 4vw, 56px); letter-spacing: -0.01em; line-height: 1; margin: 8px 0 16px; color: #fff; text-decoration: none; display: block; }
+
+/* -------------------------------------------------------------------------
+   Mission block
+   ------------------------------------------------------------------------- */
+
+.mission { background: var(--color-ink-900); color: #fff; position: relative; padding: 96px 0 96px; }
+.mission .stripe-top { height: 8px; }
+.mission__inner { display: grid; grid-template-columns: 1fr 1.2fr; gap: 80px; align-items: center; padding: 0 32px; max-width: 1240px; margin: 0 auto; }
+.mission h2 { font-family: var(--font-display); font-weight: 800; font-size: clamp(40px, 5vw, 72px); line-height: 0.95; letter-spacing: -0.01em; text-transform: uppercase; margin: 0 0 20px; }
+.mission h2 .acc { color: var(--color-red-500); }
+.mission .eye { font-family: var(--font-display); font-weight: 700; font-size: 13px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--color-yellow-500); margin-bottom: 16px; display: block; }
+.mission p { font-family: var(--font-body); font-size: 18px; line-height: 1.55; color: #C6C9CC; margin: 0 0 16px; }
+
+/* -------------------------------------------------------------------------
+   Quote form
+   ------------------------------------------------------------------------- */
+
+.quote { background: var(--color-bone); }
+.quote__inner { display: grid; grid-template-columns: 1fr 1.2fr; gap: 64px; align-items: start; }
+.quote .form { background: #fff; border: 2px solid var(--color-ink-900); border-radius: 4px; padding: 36px; box-shadow: 6px 6px 0 var(--color-ink-900); }
+.quote .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+.quote .form-grid .col-full { grid-column: 1 / -1; }
+.quote label { display: block; font-family: var(--font-display); font-weight: 700; font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--color-ink-900); margin-bottom: 8px; }
+.quote .field { width: 100%; font-family: var(--font-body); font-size: 15px; color: var(--color-ink-900); padding: 12px 14px; background: #fff; border: 1.5px solid var(--color-steel-300); border-radius: 2px; outline: none; transition: border-color var(--dur-fast), box-shadow var(--dur-fast); }
+.quote .field:focus { border-color: var(--color-ink-900); box-shadow: 0 0 0 3px rgba(209,31,44,.18); }
+.quote textarea.field { resize: vertical; min-height: 90px; font-family: var(--font-body); }
+.quote .form-help { font-family: var(--font-body); font-size: 12px; color: var(--fg-muted); margin-top: 14px; }
+.quote .form__submit { margin-top: 20px; }
+.quote .success { background: var(--color-green-50); border: 1.5px solid var(--color-green-500); color: var(--color-green-600); padding: 16px; border-radius: 2px; font-family: var(--font-body); font-size: 14px; line-height: 1.5; margin-bottom: 18px; }
+
+/* -------------------------------------------------------------------------
+   Footer
+   ------------------------------------------------------------------------- */
+
+.footer { background: var(--color-ink-900); color: #B6B9BD; padding: 72px 0 32px; }
+.footer__grid { display: grid; grid-template-columns: 1.4fr 1fr 1fr 1fr; gap: 48px; padding-bottom: 48px; border-bottom: 1px solid var(--color-ink-600); }
+.footer__brand img { height: 56px; margin-bottom: 18px; }
+.footer__brand p { font-family: var(--font-body); font-size: 14px; line-height: 1.55; color: #B6B9BD; margin: 0 0 16px; max-width: 38ch; }
+.footer__col h4 { font-family: var(--font-display); font-weight: 700; font-size: 12px; letter-spacing: 0.22em; text-transform: uppercase; color: #fff; margin: 0 0 18px; }
+.footer__col ul { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 10px; }
+.footer__col a { font-family: var(--font-body); font-size: 14px; color: #B6B9BD; text-decoration: none; }
+.footer__col a:hover { color: var(--color-red-500); }
+.footer__contact { font-family: var(--font-body); font-size: 14px; line-height: 1.7; color: #B6B9BD; }
+.footer__contact strong { color: #fff; font-weight: 600; }
+.footer__bottom { display: flex; justify-content: space-between; align-items: center; padding-top: 24px; }
+.footer__bottom small { font-family: var(--font-body); font-size: 12px; color: var(--color-steel-400); }
+.footer__badges { display: flex; gap: 10px; }
+
+/* -------------------------------------------------------------------------
+   Modal (service detail)
+   ------------------------------------------------------------------------- */
+
+.modal { position: fixed; inset: 0; background: rgba(11,11,12,.7); z-index: 100; display: flex; align-items: center; justify-content: center; padding: 32px; animation: fadeIn 0.18s var(--ease-out); }
+.modal__panel { background: #fff; max-width: 720px; width: 100%; max-height: 86vh; overflow: auto; border: 2px solid var(--color-ink-900); border-radius: 4px; box-shadow: 8px 8px 0 var(--color-red-500); }
+.modal__photo { aspect-ratio: 16/7; }
+.modal__body { padding: 36px; }
+.modal__body h3 { font-family: var(--font-display); font-weight: 800; font-size: 36px; text-transform: uppercase; margin: 0 0 14px; line-height: 1; letter-spacing: -0.01em; }
+.modal__body p { font-family: var(--font-body); font-size: 16px; line-height: 1.55; color: var(--fg-default); margin: 0 0 14px; }
+.modal__close { position: absolute; top: 20px; right: 24px; background: #fff; border: 1.5px solid var(--color-ink-900); width: 36px; height: 36px; border-radius: 2px; cursor: pointer; display: flex; align-items: center; justify-content: center; }
+.modal__close svg { width: 18px; height: 18px; }
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+}
+
+
+
+  html, body { margin: 0; padding: 0; background: #e7e5df; }
+  .canvas { background: #e7e5df; min-width: 100%; width: max-content; min-height: 100vh; box-sizing: border-box; padding: 48px; display: flex; flex-direction: column; gap: 16px; align-items: flex-start; }
+  .canvas__head { width: 1240px; max-width: 1240px; margin-bottom: 12px; }
+  .canvas__head h1 { font-family: var(--font-display); font-weight: 800; text-transform: uppercase; letter-spacing: -0.01em; font-size: 30px; color: var(--color-ink-900); margin: 0 0 10px; }
+  .canvas__head p { font-family: var(--font-body); font-size: 14px; line-height: 1.6; color: var(--color-steel-500); margin: 0; max-width: 80ch; }
+  .canvas__head .tag { display: inline-block; font-family: var(--font-display); font-weight: 700; font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: #fff; background: var(--color-red-500); padding: 5px 11px; border-radius: 2px; margin-bottom: 16px; }
+  .flabel { font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.06em; color: var(--color-steel-500); text-transform: uppercase; margin-top: 18px; }
+  .flabel b { color: var(--color-ink-900); font-weight: 700; }
+  .frame { width: 1240px; flex: none; background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,.10); border-radius: 2px; overflow: hidden; }
+  .frame .header { position: relative; top: auto; }
+  .device { width: 393px; flex: none; background: #000; border-radius: 36px; padding: 10px; box-shadow: 0 8px 30px rgba(0,0,0,.18); position: relative; }
+  .device__screen { width: 100%; height: 740px; overflow: hidden; border-radius: 28px; background: #fff; position: relative; }
+  .row { display: flex; gap: 40px; align-items: flex-start; }
+  /* helpers reused in custom heroes */
+  .stat { display: flex; flex-direction: column; gap: 4px; }
+  .stat .n { font-family: var(--font-display); font-weight: 900; font-size: 34px; line-height: 1; color: #fff; letter-spacing: -0.02em; }
+  .stat .n .acc { color: var(--color-red-500); }
+  .stat .l { font-family: var(--font-display); font-weight: 600; font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; color: #B6B9BD; }
+  .eyebrow-line { display: inline-flex; align-items: center; gap: 12px; font-family: var(--font-display); font-weight: 700; font-size: 13px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--color-red-500); }
+  .eyebrow-line::before { content: ""; width: 34px; height: 3px; background: var(--color-red-500); }
+  .mini-field { width: 100%; font-family: var(--font-body); font-size: 14px; color: var(--color-ink-900); padding: 11px 13px; background: #fff; border: 1.5px solid var(--color-steel-300); border-radius: 2px; outline: none; }
+  .mini-field:focus { border-color: var(--color-ink-900); box-shadow: 0 0 0 3px rgba(209,31,44,.18); }
+  .mini-label { display: block; font-family: var(--font-display); font-weight: 700; font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--color-ink-900); margin-bottom: 6px; }
+
+
+/* =========================================================================
+   PRODUCTION OVERRIDES & RESPONSIVE  (added for the live coded site)
+   Keeps the design intact; removes mockup-only chrome and adds real
+   responsive behavior + a working mobile menu.
+   ========================================================================= */
+
+html { scroll-behavior: smooth; }
+body { background: var(--bg-page); color: var(--fg-default); font-family: var(--font-body); -webkit-font-smoothing: antialiased; }
+img { max-width: 100%; display: block; }
+a { color: inherit; }
+section { scroll-margin-top: 84px; }
+
+/* photo placeholders: hide the mockup "PHOTO ·" caption, keep a clean branded fill */
+.photo-slot::after { content: none !important; }
+.photo-slot { background: linear-gradient(135deg, #2C3035 0%, #0B0B0C 100%); }
+
+/* hero (was inline-styled in the mockup) */
+.hero { display: grid; grid-template-columns: 1.04fr .96fr; background: var(--color-ink-900); color: #fff; min-height: 560px; }
+.hero__copy { padding: 76px 56px; display: flex; flex-direction: column; justify-content: center; }
+.hero__title { font-family: var(--font-display); font-weight: 800; font-size: clamp(40px, 6vw, 74px); line-height: .93; letter-spacing: -0.015em; text-transform: uppercase; margin: 0 0 24px; max-width: 13ch; }
+.hero__title em { font-style: normal; color: var(--color-red-500); }
+.hero__lede { font-family: var(--font-body); font-size: 19px; line-height: 1.45; color: #D8DADD; max-width: 48ch; margin: 0 0 34px; }
+.hero__media { position: relative; background: linear-gradient(135deg, #3a3d40 0%, #1a1c1f 100%); display: flex; align-items: center; justify-content: center; padding: 40px; overflow: hidden; }
+
+/* three-steps grid (was inline) */
+.steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+
+/* mobile nav toggle (hamburger) — hidden on desktop */
+.nav-toggle { display: none; width: 44px; height: 44px; align-items: center; justify-content: center; background: var(--color-ink-900); border: 0; border-radius: 2px; cursor: pointer; color: #fff; }
+.nav-toggle svg { width: 22px; height: 22px; }
+
+/* mobile drawer */
+.drawer { position: fixed; inset: 0; z-index: 200; background: var(--color-ink-900); color: #fff; display: flex; flex-direction: column; padding: 18px; transform: translateX(100%); transition: transform var(--dur-normal) var(--ease-out); visibility: hidden; }
+.drawer.is-open { transform: translateX(0); visibility: visible; }
+.drawer__top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 28px; }
+.drawer__top img { height: 32px; width: auto; }
+.drawer__close { width: 44px; height: 44px; display: flex; align-items: center; justify-content: center; background: transparent; border: 1.5px solid rgba(255,255,255,.4); border-radius: 2px; cursor: pointer; color: #fff; }
+.drawer__close svg { width: 20px; height: 20px; }
+.drawer nav { display: flex; flex-direction: column; }
+.drawer nav a { font-family: var(--font-display); font-weight: 700; font-size: 26px; text-transform: uppercase; letter-spacing: 0.02em; padding: 16px 0; border-bottom: 1px solid var(--color-ink-600); text-decoration: none; color: #fff; cursor: pointer; }
+.drawer__foot { margin-top: auto; display: flex; flex-direction: column; gap: 10px; }
+
+/* service modal */
+.modal { position: fixed; inset: 0; z-index: 300; background: rgba(11,11,12,.6); display: none; align-items: center; justify-content: center; padding: 24px; }
+.modal.is-open { display: flex; }
+.modal__panel { background: #fff; max-width: 880px; width: 100%; border-radius: 4px; overflow: hidden; display: grid; grid-template-columns: .9fr 1.1fr; max-height: 90vh; }
+.modal__photo { min-height: 100%; }
+.modal__body { padding: 40px; position: relative; overflow-y: auto; }
+.modal__body h3 { font-family: var(--font-display); font-weight: 800; text-transform: uppercase; font-size: 30px; line-height: 1.02; margin: 14px 0 14px; }
+.modal__body p { font-family: var(--font-body); font-size: 15px; line-height: 1.6; color: var(--color-steel-500); }
+.modal__close { position: absolute; top: 16px; right: 16px; width: 38px; height: 38px; display: flex; align-items: center; justify-content: center; background: var(--color-steel-100); border: 0; border-radius: 2px; cursor: pointer; }
+.modal__close svg { width: 18px; height: 18px; }
+
+/* tablet */
+@media (max-width: 1024px) {
+  .quote__inner, .pillars, .cta-band__inner { grid-template-columns: 1fr; gap: 40px; }
+  .footer__grid { grid-template-columns: 1fr 1fr; gap: 36px; }
+  .services__grid { grid-template-columns: 1fr 1fr; }
+}
+
+/* mobile nav threshold */
+@media (max-width: 900px) {
+  .header__nav { display: none; }
+  .header__cta .header__phone { display: none; }
+  .nav-toggle { display: flex; }
+  .hero { grid-template-columns: 1fr; }
+  .hero__copy { padding: 48px 28px; }
+  .hero__media { min-height: 360px; padding: 28px; }
+  .steps { grid-template-columns: 1fr; }
+  .modal__panel { grid-template-columns: 1fr; }
+  .modal__photo { min-height: 160px; }
+  .section { padding: 64px 0; }
+}
+
+/* phones */
+@media (max-width: 600px) {
+  .container { padding: 0 20px; }
+  .emerg { padding: 10px 16px; gap: 10px; font-size: 12px; }
+  .emerg__lede { font-size: 12px; }
+  .services__grid { grid-template-columns: 1fr; }
+  .trust__row { grid-template-columns: 1fr 1fr; }
+  .footer__grid { grid-template-columns: 1fr; gap: 28px; }
+  .header__inner { padding: 14px 18px; gap: 16px; }
+  .cta-band .phone-block .n { font-size: 30px; }
+}
+
+/* --- overflow guard + mobile emergency banner fixes --- */
+html, body { overflow-x: hidden; }
+@media (max-width: 600px) {
+  .emerg { flex-wrap: wrap; justify-content: center; text-align: center; row-gap: 4px; }
+  .emerg__spacer { display: none; }
+  .emerg__lede { flex: 1 1 100%; }
+  .hero__title { font-size: clamp(34px, 9vw, 44px); }
+}
+
+/* --- force secondary-page grids to stack on mobile (override inline grid-template-columns) --- */
+@media (max-width: 1024px) {
+  .services__grid { grid-template-columns: 1fr 1fr !important; }
+}
+@media (max-width: 680px) {
+  .services__grid, .reviews__grid { grid-template-columns: 1fr !important; }
+}
+
+/* outline badge for light backgrounds (service-area chips) */
+.badge--outline { background: transparent; color: var(--color-ink-900); border: 1px solid var(--color-steel-300); }
+
+/* --- branded icon panels (replace empty photo placeholders with design-system icons) --- */
+.photo-slot { background: linear-gradient(140deg, #262a30 0%, #0B0B0C 72%); position: relative; overflow: hidden; }
+.photo-slot > .ds-ico { display: block; width: 38%; max-width: 132px; min-width: 56px; height: auto; color: rgba(255,255,255,0.2); overflow: visible; }
+.photo-slot::before { content: ""; position: absolute; left: 0; bottom: 0; width: 100%; height: 4px; background: var(--color-red-500); opacity: .9; }
+/* small hazard accent, top-left, for brand flavor */
+.photo-slot::after { content: "" !important; position: absolute; top: 16px; left: 16px; width: 34px; height: 6px; background-image: repeating-linear-gradient(45deg, var(--color-yellow-500) 0 7px, #0B0B0C 7px 14px); opacity: .85; border-radius: 1px; }
+
+/* --- hero panel: plain black, no icon or accents (per request); other slots keep their icons --- */
+.hero__media .photo-slot { background: #0B0B0C; }
+.hero__media .photo-slot .ds-ico { display: none; }
+.hero__media .photo-slot::before,
+.hero__media .photo-slot::after { display: none !important; content: none !important; }
+
+/* --- "How We Work": drop the left image, let the copy span full width (per request) --- */
+.pillars { grid-template-columns: 1fr; gap: 0; }
+.pillars__photo { display: none !important; }
+
+/* --- service popups: keep text legible even if a media panel is reintroduced --- */
+.modal__panel { background: rgba(255,255,255,0.96); backdrop-filter: blur(4px); }
+.modal__body { background: rgba(255,255,255,0.96); border: 1px solid rgba(11,11,12,0.08); box-shadow: 0 12px 30px rgba(11,11,12,0.18); }
+.modal__body p { color: var(--color-ink-900); }
+.modal__photo { display: none !important; }
