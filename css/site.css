@@ -613,6 +613,7 @@ section { scroll-margin-top: 84px; }
 .hero__title em { font-style: normal; color: var(--color-red-500); }
 .hero__lede { font-family: var(--font-body); font-size: 19px; line-height: 1.45; color: #D8DADD; max-width: 48ch; margin: 0 0 34px; }
 .hero__media { position: relative; background: linear-gradient(135deg, #3a3d40 0%, #1a1c1f 100%); display: flex; align-items: center; justify-content: center; min-height: 420px; padding: 40px; overflow: hidden; }
+.hero__form-card { position: relative; z-index: 2; background: #fff; color: var(--color-ink-900); width: min(100%, 560px); max-height: min(76vh, 760px); overflow-y: auto; scrollbar-gutter: stable; border: 2px solid var(--color-ink-900); border-radius: 4px; box-shadow: 6px 6px 0 var(--color-red-500); padding: 18px; }
 
 /* three-steps grid (was inline) */
 .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
@@ -675,6 +676,7 @@ section { scroll-margin-top: 84px; }
   .hero { grid-template-columns: 1fr; }
   .hero__copy { padding: 48px 28px; }
   .hero__media { min-height: 360px; padding: 28px; }
+  .hero__form-card { width: min(100%, 620px); max-height: none; overflow-y: visible; }
   .steps { grid-template-columns: 1fr; }
   .modal__panel { grid-template-columns: 1fr; }
   .modal__photo { min-height: 160px; }
