@@ -612,7 +612,7 @@ section { scroll-margin-top: 84px; }
 .hero__title { font-family: var(--font-display); font-weight: 800; font-size: clamp(40px, 6vw, 74px); line-height: .93; letter-spacing: -0.015em; text-transform: uppercase; margin: 0 0 24px; max-width: 13ch; }
 .hero__title em { font-style: normal; color: var(--color-red-500); }
 .hero__lede { font-family: var(--font-body); font-size: 19px; line-height: 1.45; color: #D8DADD; max-width: 48ch; margin: 0 0 34px; }
-.hero__media { position: relative; background: linear-gradient(135deg, #3a3d40 0%, #1a1c1f 100%); display: flex; align-items: center; justify-content: center; padding: 40px; overflow: hidden; }
+.hero__media { position: relative; background: linear-gradient(135deg, #3a3d40 0%, #1a1c1f 100%); display: flex; align-items: center; justify-content: center; min-height: 420px; padding: 40px; overflow: hidden; }
 
 /* three-steps grid (was inline) */
 .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
@@ -725,15 +725,63 @@ html, body { overflow-x: hidden; }
 /* small hazard accent, top-left, for brand flavor */
 .photo-slot::after { content: "" !important; position: absolute; top: 16px; left: 16px; width: 34px; height: 6px; background-image: repeating-linear-gradient(45deg, var(--color-yellow-500) 0 7px, #0B0B0C 7px 14px); opacity: .85; border-radius: 1px; }
 
-/* --- hero panel: plain black, no icon or accents (per request); other slots keep their icons --- */
-.hero__media .photo-slot { background: #0B0B0C; }
+.photo-slot.media-image {
+  background-color: var(--color-ink-900);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.photo-slot.media-image::before {
+  height: 100%;
+  background: linear-gradient(180deg, rgba(11,11,12,0) 50%, rgba(11,11,12,.34) 100%);
+}
+.photo-slot.media-image::after {
+  content: "" !important;
+  display: block;
+  top: auto;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: auto;
+  height: 5px;
+  background: var(--color-red-500);
+  opacity: .95;
+}
+.photo-slot.media-image > .ds-ico { display: none; }
+.media-hero { background-image: url("../assets/illustrations/alpha-one-hero.png"); }
+.media-installation { background-image: url("../assets/illustrations/alpha-one-installation.png"); }
+.media-repair { background-image: url("../assets/illustrations/alpha-one-repair.png"); }
+.media-openers { background-image: url("../assets/illustrations/alpha-one-openers.png"); }
+.media-commercial { background-image: url("../assets/illustrations/alpha-one-openers.png"); }
+.media-maintenance { background-image: url("../assets/illustrations/alpha-one-hero.png"); }
+.media-about { background-image: url("../assets/illustrations/alpha-one-repair.png"); }
+
+.hero__media .photo-slot.media-image::before {
+  background: linear-gradient(90deg, rgba(11,11,12,.12), rgba(11,11,12,.58));
+}
+.hero__media .photo-slot.media-image::after {
+  display: none !important;
+  content: none !important;
+}
+
+/* --- hero panel: use black as the fallback surface; media slots keep their images --- */
+.hero__media .photo-slot:not(.media-image) { background: #0B0B0C; }
 .hero__media .photo-slot .ds-ico { display: none; }
 .hero__media .photo-slot::before,
 .hero__media .photo-slot::after { display: none !important; content: none !important; }
 
-/* --- "How We Work": drop the left image, let the copy span full width (per request) --- */
-.pillars { grid-template-columns: 1fr; gap: 0; }
-.pillars__photo { display: none !important; }
+/* --- "How We Work": restored media column with approved Alpha One visual --- */
+.pillars { grid-template-columns: 1.2fr 1fr; gap: 64px; }
+.pillars__photo.media-image { display: block !important; min-height: 460px; }
+
+@media (max-width: 1024px) {
+  .pillars { grid-template-columns: 1fr; gap: 40px; }
+  .pillars__photo.media-image { aspect-ratio: 16 / 10; min-height: 320px; }
+}
+
+@media (max-width: 600px) {
+  .pillars__photo.media-image { min-height: 0; }
+}
 
 /* --- service popups: keep text legible even if a media panel is reintroduced --- */
 .modal__panel { background: rgba(255,255,255,0.96); backdrop-filter: blur(4px); }
