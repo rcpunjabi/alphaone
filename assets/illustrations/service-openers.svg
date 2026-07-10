@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Ceiling-mounted smart garage door opener with Wi-Fi and remote">
+  <rect width="1200" height="900" fill="#F7F5F1"/>
+  <!-- ceiling -->
+  <rect x="0" y="0" width="1200" height="90" fill="#E2E3E5"/>
+  <line x1="0" y1="90" x2="1200" y2="90" stroke="#0B0B0C" stroke-width="6"/>
+  <rect x="0" y="760" width="1200" height="140" fill="#E2E3E5"/>
+  <line x1="0" y1="760" x2="1200" y2="760" stroke="#0B0B0C" stroke-width="6"/>
+  <!-- rail to door header at left -->
+  <g stroke="#5B6066" stroke-width="10" stroke-linecap="round">
+    <line x1="60" y1="240" x2="640" y2="240"/>
+  </g>
+  <!-- trolley on rail -->
+  <rect x="330" y="222" width="70" height="36" rx="4" fill="#8A8F95" stroke="#0B0B0C" stroke-width="6"/>
+  <!-- door top at far left -->
+  <g stroke="#0B0B0C" stroke-width="7">
+    <rect x="0" y="260" width="150" height="500" fill="#FFFFFF"/>
+    <line x1="0" y1="385" x2="150" y2="385"/>
+    <line x1="0" y1="510" x2="150" y2="510"/>
+    <line x1="0" y1="635" x2="150" y2="635"/>
+  </g>
+  <!-- opener unit -->
+  <g stroke="#0B0B0C" stroke-width="7" stroke-linejoin="round">
+    <line x1="700" y1="90" x2="700" y2="150" stroke-width="10" stroke="#5B6066"/>
+    <line x1="820" y1="90" x2="820" y2="150" stroke-width="10" stroke="#5B6066"/>
+    <rect x="640" y="150" width="240" height="130" rx="8" fill="#1F2227"/>
+    <rect x="668" y="182" width="80" height="60" rx="4" fill="#FFF6D6"/>
+    <circle cx="836" cy="212" r="12" fill="#D11F2C"/>
+    <line x1="640" y1="240" x2="880" y2="240" stroke="#2C3035"/>
+  </g>
+  <!-- light cone -->
+  <path d="M708 280 L560 760 H860 L788 280 z" fill="#FFF6D6" opacity=".7"/>
+  <!-- wifi arcs -->
+  <g stroke="#5B6066" stroke-width="8" fill="none" stroke-linecap="round">
+    <path d="M930 180 a70 70 0 0 1 0 100"/>
+    <path d="M970 140 a125 125 0 0 1 0 180"/>
+    <circle cx="905" cy="230" r="7" fill="#5B6066" stroke="none"/>
+  </g>
+  <!-- remote fob -->
+  <g stroke="#0B0B0C" stroke-width="7" stroke-linejoin="round">
+    <rect x="960" y="520" width="150" height="230" rx="14" fill="#FFFFFF"/>
+    <circle cx="1035" cy="586" r="24" fill="#D11F2C"/>
+    <circle cx="1035" cy="668" r="24" fill="#C2C5C8"/>
+  </g>
+  <!-- signal from remote -->
+  <g stroke="#8A8F95" stroke-width="7" fill="none" stroke-linecap="round">
+    <path d="M940 500 a55 55 0 0 0 -40 -40"/>
+  </g>
+</svg>

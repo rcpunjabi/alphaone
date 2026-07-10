@@ -748,13 +748,13 @@ html, body { overflow-x: hidden; }
   opacity: .95;
 }
 .photo-slot.media-image > .ds-ico { display: none; }
-.media-hero { background-image: url("../assets/illustrations/alpha-one-hero.png"); }
-.media-installation { background-image: url("../assets/illustrations/alpha-one-installation.png"); }
-.media-repair { background-image: url("../assets/illustrations/alpha-one-repair.png"); }
-.media-openers { background-image: url("../assets/illustrations/alpha-one-openers.png"); }
-.media-commercial { background-image: url("../assets/illustrations/alpha-one-openers.png"); }
-.media-maintenance { background-image: url("../assets/illustrations/alpha-one-hero.png"); }
-.media-about { background-image: url("../assets/illustrations/alpha-one-repair.png"); }
+.media-hero { background-image: url("../assets/illustrations/hero-home.svg"); }
+.media-installation { background-image: url("../assets/illustrations/service-installation.svg"); }
+.media-repair { background-image: url("../assets/illustrations/service-repair.svg"); }
+.media-openers { background-image: url("../assets/illustrations/service-openers.svg"); }
+.media-commercial { background-image: url("../assets/illustrations/service-commercial.svg"); }
+.media-maintenance { background-image: url("../assets/illustrations/service-maintenance.svg"); }
+.media-about { background-image: url("../assets/illustrations/pillars-shop.svg"); }
 
 .hero__media .photo-slot.media-image::before {
   background: linear-gradient(90deg, rgba(11,11,12,.12), rgba(11,11,12,.58));

@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Alpha One service van outside a home at night, garage lit and door being serviced">
+  <rect width="1200" height="900" fill="#16181B"/>
+  <g fill="#2C3035">
+    <rect x="140" y="96" width="4" height="4"/><rect x="320" y="150" width="4" height="4"/><rect x="520" y="80" width="4" height="4"/><rect x="760" y="120" width="4" height="4"/><rect x="980" y="70" width="4" height="4"/><rect x="1100" y="170" width="4" height="4"/><rect x="80" y="220" width="4" height="4"/><rect x="880" y="200" width="4" height="4"/>
+  </g>
+  <path d="M1015 130 a52 52 0 1 0 30 94 a62 62 0 0 1 -30 -94 z" fill="#2C3035"/>
+  <rect x="0" y="760" width="1200" height="140" fill="#101214"/>
+  <line x1="0" y1="760" x2="1200" y2="760" stroke="#2C3035" stroke-width="4"/>
+  <!-- house -->
+  <g stroke="#C2C5C8" stroke-width="7" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M560 400 L820 260 L1080 400" fill="none"/>
+    <rect x="588" y="400" width="464" height="360" fill="#1F2227"/>
+    <rect x="960" y="300" width="56" height="70" fill="#1F2227"/>
+    <!-- garage opening, warm lit -->
+    <rect x="640" y="480" width="280" height="280" fill="#FFF6D6"/>
+    <!-- door raised: two slats at top of opening -->
+    <rect x="640" y="480" width="280" height="42" fill="#E2E3E5"/>
+    <rect x="640" y="522" width="280" height="42" fill="#F0F0EF"/>
+    <line x1="640" y1="522" x2="920" y2="522"/>
+    <line x1="640" y1="564" x2="920" y2="564"/>
+    <!-- entry door + window -->
+    <rect x="968" y="560" width="72" height="200" fill="#1F2227"/>
+    <circle cx="1024" cy="664" r="5" fill="#C2C5C8"/>
+    <rect x="964" y="420" width="80" height="60" fill="#16181B"/>
+    <line x1="1004" y1="420" x2="1004" y2="480"/>
+  </g>
+  <!-- silhouette tech inside lit garage -->
+  <g fill="#16181B">
+    <circle cx="800" cy="612" r="16"/>
+    <path d="M784 632 h32 v58 h-12 v-34 h-8 v34 h-12 z"/>
+    <rect x="812" y="640" width="34" height="8" rx="4"/>
+  </g>
+  <!-- porch light -->
+  <circle cx="1004" cy="540" r="8" fill="#FFD24A"/>
+  <!-- driveway -->
+  <path d="M640 760 L600 860 M920 760 L980 860" stroke="#2C3035" stroke-width="5"/>
+  <!-- van -->
+  <g stroke="#C2C5C8" stroke-width="7" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M120 620 h250 a14 14 0 0 1 14 14 v130 h-300 v-108 a36 36 0 0 1 36 -36 z" fill="#1F2227"/>
+    <path d="M132 636 h60 v52 h-88 a36 36 0 0 1 28 -52 z" fill="#16181B"/>
+    <line x1="104" y1="700" x2="384" y2="700" stroke="#D11F2C" stroke-width="16"/>
+    <line x1="120" y1="596" x2="368" y2="596"/>
+    <circle cx="160" cy="768" r="34" fill="#0B0B0C"/>
+    <circle cx="160" cy="768" r="14" fill="#5B6066"/>
+    <circle cx="330" cy="768" r="34" fill="#0B0B0C"/>
+    <circle cx="330" cy="768" r="14" fill="#5B6066"/>
+  </g>
+  <!-- headlight glow -->
+  <path d="M92 656 l-56 18 v22 l56 12 z" fill="#FFF6D6" opacity=".85"/>
+</svg>

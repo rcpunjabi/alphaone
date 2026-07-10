@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Commercial warehouse with rolling steel doors and loading dock">
+  <rect width="1200" height="900" fill="#F7F5F1"/>
+  <!-- facade -->
+  <rect x="60" y="120" width="1080" height="560" fill="#F0F0EF" stroke="#0B0B0C" stroke-width="7"/>
+  <rect x="60" y="120" width="1080" height="70" fill="#E2E3E5" stroke="#0B0B0C" stroke-width="7"/>
+  <!-- rolling steel door 1 -->
+  <g stroke="#0B0B0C" stroke-width="7">
+    <rect x="140" y="260" width="360" height="420" fill="#FFFFFF"/>
+    <g stroke="#C2C5C8" stroke-width="5">
+      <line x1="140" y1="295" x2="500" y2="295"/><line x1="140" y1="330" x2="500" y2="330"/><line x1="140" y1="365" x2="500" y2="365"/><line x1="140" y1="400" x2="500" y2="400"/><line x1="140" y1="435" x2="500" y2="435"/><line x1="140" y1="470" x2="500" y2="470"/><line x1="140" y1="505" x2="500" y2="505"/><line x1="140" y1="540" x2="500" y2="540"/><line x1="140" y1="575" x2="500" y2="575"/><line x1="140" y1="610" x2="500" y2="610"/><line x1="140" y1="645" x2="500" y2="645"/>
+    </g>
+    <rect x="120" y="230" width="400" height="30" rx="4" fill="#5B6066"/>
+  </g>
+  <!-- rolling steel door 2, half open with truck behind -->
+  <g stroke="#0B0B0C" stroke-width="7">
+    <rect x="600" y="260" width="360" height="420" fill="#16181B"/>
+    <rect x="600" y="260" width="360" height="180" fill="#FFFFFF"/>
+    <g stroke="#C2C5C8" stroke-width="5">
+      <line x1="600" y1="295" x2="960" y2="295"/><line x1="600" y1="330" x2="960" y2="330"/><line x1="600" y1="365" x2="960" y2="365"/><line x1="600" y1="400" x2="960" y2="400"/>
+    </g>
+    <line x1="600" y1="440" x2="960" y2="440" stroke-width="9"/>
+    <rect x="580" y="230" width="400" height="30" rx="4" fill="#5B6066"/>
+  </g>
+  <!-- man door + sign block -->
+  <rect x="1020" y="480" width="90" height="200" fill="#1F2227" stroke="#0B0B0C" stroke-width="7"/>
+  <circle cx="1092" cy="586" r="6" fill="#C2C5C8"/>
+  <rect x="1020" y="300" width="90" height="90" fill="#D11F2C" stroke="#0B0B0C" stroke-width="7"/>
+  <!-- dock platform with hazard stripe edge -->
+  <rect x="0" y="680" width="1200" height="46" fill="#0B0B0C"/>
+  <g>
+    <path d="M0 680 h1200 v46 h-1200 z" fill="#F2B700"/>
+    <g fill="#0B0B0C">
+      <path d="M0 680 l46 46 h-46 z"/><path d="M46 680 h46 l-46 46 h-46 z" transform="translate(46 0)"/>
+    </g>
+    <g fill="#0B0B0C">
+      <path d="M20 726 L66 680 H112 L66 726 z"/><path d="M112 726 L158 680 H204 L158 726 z"/><path d="M204 726 L250 680 H296 L250 726 z"/><path d="M296 726 L342 680 H388 L342 726 z"/><path d="M388 726 L434 680 H480 L434 726 z"/><path d="M480 726 L526 680 H572 L526 726 z"/><path d="M572 726 L618 680 H664 L618 726 z"/><path d="M664 726 L710 680 H756 L710 726 z"/><path d="M756 726 L802 680 H848 L802 726 z"/><path d="M848 726 L894 680 H940 L894 726 z"/><path d="M940 726 L986 680 H1032 L986 726 z"/><path d="M1032 726 L1078 680 H1124 L1078 726 z"/><path d="M1124 726 L1170 680 H1216 L1170 726 z"/>
+    </g>
+  </g>
+  <line x1="0" y1="680" x2="1200" y2="680" stroke="#0B0B0C" stroke-width="6"/>
+  <rect x="0" y="726" width="1200" height="174" fill="#E2E3E5"/>
+  <!-- forklift-style pallet stack -->
+  <g stroke="#0B0B0C" stroke-width="6" stroke-linejoin="round">
+    <rect x="660" y="470" width="110" height="80" fill="#8A8F95"/>
+    <rect x="680" y="390" width="110" height="80" fill="#C2C5C8"/>
+    <line x1="660" y1="510" x2="770" y2="510"/>
+  </g>
+</svg>

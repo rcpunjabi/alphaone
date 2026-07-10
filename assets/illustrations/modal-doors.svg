@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 525" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Three garage door styles: raised panel, carriage house, and modern glass">
+  <rect width="1200" height="525" fill="#F7F5F1"/>
+  <rect x="0" y="440" width="1200" height="85" fill="#E2E3E5"/>
+  <line x1="0" y1="440" x2="1200" y2="440" stroke="#0B0B0C" stroke-width="6"/>
+  <!-- raised panel -->
+  <g stroke="#0B0B0C" stroke-width="6">
+    <rect x="70" y="90" width="310" height="350" fill="#FFFFFF"/>
+    <line x1="70" y1="177" x2="380" y2="177"/><line x1="70" y1="264" x2="380" y2="264"/><line x1="70" y1="351" x2="380" y2="351"/>
+    <g fill="none" stroke="#C2C5C8" stroke-width="4">
+      <rect x="92" y="110" width="120" height="46"/><rect x="238" y="110" width="120" height="46"/>
+      <rect x="92" y="197" width="120" height="46"/><rect x="238" y="197" width="120" height="46"/>
+      <rect x="92" y="284" width="120" height="46"/><rect x="238" y="284" width="120" height="46"/>
+      <rect x="92" y="371" width="120" height="46"/><rect x="238" y="371" width="120" height="46"/>
+    </g>
+  </g>
+  <!-- carriage house -->
+  <g stroke="#0B0B0C" stroke-width="6">
+    <rect x="445" y="90" width="310" height="350" fill="#F0F0EF"/>
+    <line x1="600" y1="90" x2="600" y2="440"/>
+    <path d="M445 90 l155 120 M600 90 l-155 120 M600 90 l155 120 M755 90 l-155 120" stroke="#8A8F95" stroke-width="5"/>
+    <line x1="445" y1="210" x2="755" y2="210"/>
+    <g stroke="#5B6066" stroke-width="5">
+      <line x1="480" y1="250" x2="480" y2="400"/><line x1="530" y1="250" x2="530" y2="400"/><line x1="670" y1="250" x2="670" y2="400"/><line x1="720" y1="250" x2="720" y2="400"/>
+    </g>
+    <circle cx="580" cy="330" r="9" fill="#0B0B0C"/><circle cx="620" cy="330" r="9" fill="#0B0B0C"/>
+  </g>
+  <!-- modern glass -->
+  <g stroke="#0B0B0C" stroke-width="6">
+    <rect x="820" y="90" width="310" height="350" fill="#1F2227"/>
+    <g fill="#C2C5C8" opacity=".55">
+      <rect x="838" y="108" width="274" height="52"/>
+      <rect x="838" y="196" width="274" height="52"/>
+      <rect x="838" y="284" width="274" height="52"/>
+      <rect x="838" y="372" width="274" height="52"/>
+    </g>
+    <line x1="820" y1="178" x2="1130" y2="178"/><line x1="820" y1="266" x2="1130" y2="266"/><line x1="820" y1="354" x2="1130" y2="354"/>
+  </g>
+  <!-- red pick tag on middle door -->
+  <g stroke="#0B0B0C" stroke-width="5" stroke-linejoin="round">
+    <path d="M700 60 h84 v56 h-84 l-24 -28 z" fill="#D11F2C"/>
+    <circle cx="694" cy="88" r="5" fill="#FFFFFF"/>
+  </g>
+</svg>

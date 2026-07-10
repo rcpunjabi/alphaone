@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 1200" preserveAspectRatio="xMidYMid slice" role="img" aria-label="The Alpha One family shop in Lombard with service van out front">
+  <rect width="960" height="1200" fill="#F7F5F1"/>
+  <!-- sky detail -->
+  <g stroke="#C2C5C8" stroke-width="7" fill="none" stroke-linecap="round">
+    <path d="M120 140 h130 a40 40 0 1 0 -38 -52 a34 34 0 0 0 -60 20"/>
+    <path d="M700 220 h110 a34 34 0 1 0 -32 -44"/>
+  </g>
+  <!-- building -->
+  <rect x="90" y="320" width="780" height="560" fill="#F0F0EF" stroke="#0B0B0C" stroke-width="8"/>
+  <!-- parapet -->
+  <rect x="70" y="280" width="820" height="60" fill="#E2E3E5" stroke="#0B0B0C" stroke-width="8"/>
+  <!-- sign band with trapezoid door mark (logo motif) -->
+  <rect x="180" y="360" width="600" height="120" fill="#0B0B0C"/>
+  <g transform="translate(480 420)">
+    <path d="M-70 34 L-46 -34 H46 L70 34 z" fill="none" stroke="#FFFFFF" stroke-width="9" stroke-linejoin="round"/>
+    <line x1="-38" y1="-11" x2="38" y2="-11" stroke="#FFFFFF" stroke-width="7"/>
+    <line x1="-46" y1="11" x2="46" y2="11" stroke="#FFFFFF" stroke-width="7"/>
+    <circle cx="104" cy="0" r="10" fill="#D11F2C"/>
+  </g>
+  <!-- bay opening, door half raised -->
+  <g stroke="#0B0B0C" stroke-width="8">
+    <rect x="180" y="540" width="420" height="340" fill="#16181B"/>
+    <rect x="180" y="540" width="420" height="80" fill="#FFFFFF"/>
+    <line x1="180" y1="580" x2="600" y2="580" stroke="#C2C5C8" stroke-width="5"/>
+    <line x1="180" y1="620" x2="600" y2="620"/>
+  </g>
+  <!-- workbench glow inside -->
+  <rect x="220" y="760" width="150" height="120" fill="#1F2227"/>
+  <circle cx="430" cy="700" r="10" fill="#FFD24A"/>
+  <!-- office window + door -->
+  <g stroke="#0B0B0C" stroke-width="8">
+    <rect x="660" y="560" width="150" height="130" fill="#FFF6D6"/>
+    <line x1="735" y1="560" x2="735" y2="690"/>
+    <rect x="672" y="740" width="120" height="140" fill="#1F2227"/>
+  </g>
+  <circle cx="772" cy="812" r="7" fill="#C2C5C8"/>
+  <!-- sidewalk + street -->
+  <rect x="0" y="880" width="960" height="60" fill="#E2E3E5" stroke="#0B0B0C" stroke-width="6"/>
+  <rect x="0" y="940" width="960" height="260" fill="#D8D6D1"/>
+  <!-- van parked -->
+  <g stroke="#0B0B0C" stroke-width="8" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M250 966 h330 a16 16 0 0 1 16 16 v148 h-392 v-118 a46 46 0 0 1 46 -46 z" fill="#FFFFFF"/>
+    <path d="M264 984 h78 v62 h-114 a46 46 0 0 1 36 -62 z" fill="#C2C5C8"/>
+    <line x1="204" y1="1064" x2="596" y2="1064" stroke="#D11F2C" stroke-width="18"/>
+    <circle cx="300" cy="1130" r="40" fill="#0B0B0C"/>
+    <circle cx="300" cy="1130" r="16" fill="#8A8F95"/>
+    <circle cx="510" cy="1130" r="40" fill="#0B0B0C"/>
+    <circle cx="510" cy="1130" r="16" fill="#8A8F95"/>
+    <line x1="376" y1="984" x2="560" y2="984"/>
+  </g>
+  <!-- planter -->
+  <g stroke="#0B0B0C" stroke-width="7">
+    <rect x="80" y="898" width="80" height="42" fill="#5B6066"/>
+    <path d="M100 898 q20 -40 40 0" fill="#3FA756"/>
+  </g>
+</svg>

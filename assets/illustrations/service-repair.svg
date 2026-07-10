@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Broken torsion spring above a garage door with a wrench ready for repair">
+  <rect width="1200" height="900" fill="#F7F5F1"/>
+  <rect x="0" y="0" width="1200" height="700" fill="#F0F0EF"/>
+  <rect x="0" y="700" width="1200" height="200" fill="#E2E3E5"/>
+  <line x1="0" y1="700" x2="1200" y2="700" stroke="#0B0B0C" stroke-width="6"/>
+  <!-- header + torsion shaft -->
+  <g stroke="#0B0B0C" stroke-width="7" stroke-linecap="round">
+    <rect x="330" y="120" width="720" height="70" fill="#E2E3E5"/>
+    <line x1="350" y1="155" x2="1030" y2="155" stroke="#5B6066" stroke-width="10"/>
+  </g>
+  <!-- spring coils, left run -->
+  <g stroke="#0B0B0C" stroke-width="6" fill="none">
+    <path d="M400 155 m0 -22 q14 22 0 44 q-14 -22 0 -44 m28 0 q14 22 0 44 q-14 -22 0 -44 m28 0 q14 22 0 44 q-14 -22 0 -44 m28 0 q14 22 0 44 q-14 -22 0 -44 m28 0 q14 22 0 44 q-14 -22 0 -44 m28 0 q14 22 0 44 q-14 -22 0 -44"/>
+    <!-- snapped ends -->
+    <path d="M588 133 l22 14 -12 18"/>
+    <path d="M666 177 l-22 -14 12 -18"/>
+    <!-- right run -->
+    <path d="M690 155 m0 -22 q14 22 0 44 q-14 -22 0 -44 m28 0 q14 22 0 44 q-14 -22 0 -44 m28 0 q14 22 0 44 q-14 -22 0 -44 m28 0 q14 22 0 44 q-14 -22 0 -44 m28 0 q14 22 0 44 q-14 -22 0 -44 m28 0 q14 22 0 44 q-14 -22 0 -44 m28 0 q14 22 0 44 q-14 -22 0 -44"/>
+  </g>
+  <!-- alert triangle at the break -->
+  <g stroke="#0B0B0C" stroke-width="6" stroke-linejoin="round">
+    <path d="M627 58 l38 62 h-76 z" fill="#D11F2C"/>
+    <line x1="627" y1="82" x2="627" y2="98" stroke="#FFFFFF"/>
+    <circle cx="627" cy="110" r="3.5" fill="#FFFFFF" stroke="none"/>
+  </g>
+  <!-- door below -->
+  <g stroke="#0B0B0C" stroke-width="7">
+    <rect x="330" y="190" width="720" height="510" fill="#FFFFFF"/>
+    <line x1="330" y1="318" x2="1050" y2="318"/>
+    <line x1="330" y1="446" x2="1050" y2="446"/>
+    <line x1="330" y1="574" x2="1050" y2="574"/>
+    <g fill="none" stroke="#C2C5C8" stroke-width="5">
+      <rect x="370" y="222" width="300" height="64" rx="2"/><rect x="710" y="222" width="300" height="64" rx="2"/>
+      <rect x="370" y="350" width="300" height="64" rx="2"/><rect x="710" y="350" width="300" height="64" rx="2"/>
+      <rect x="370" y="478" width="300" height="64" rx="2"/><rect x="710" y="478" width="300" height="64" rx="2"/>
+      <rect x="370" y="606" width="300" height="64" rx="2"/><rect x="710" y="606" width="300" height="64" rx="2"/>
+    </g>
+  </g>
+  <!-- door slightly tilted off-track cue: left track -->
+  <g stroke="#5B6066" stroke-width="8" stroke-linecap="round">
+    <line x1="306" y1="190" x2="306" y2="700"/>
+    <line x1="1074" y1="190" x2="1074" y2="700"/>
+  </g>
+  <!-- big wrench foreground -->
+  <g transform="rotate(-30 300 640)" stroke="#0B0B0C" stroke-width="7" stroke-linejoin="round">
+    <rect x="185" y="622" width="210" height="36" fill="#8A8F95"/>
+    <circle cx="165" cy="640" r="46" fill="#8A8F95"/>
+    <circle cx="165" cy="640" r="19" fill="#F0F0EF"/>
+    <path d="M446 615 A 44 44 0 1 0 446 665 L 428 656 A 24 24 0 0 1 428 624 Z" fill="#8A8F95"/>
+  </g>
+</svg>
