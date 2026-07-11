@@ -7,14 +7,17 @@
   var SERVICES = {
     install: {
       title: "Garage Door Installation and Replacement",
+      mediaClass: "media-installation",
       body: "Looking to upgrade your home or business with a new or replacement garage door? We offer a wide selection of garage doors to fit every need and aesthetic. Choose from a diverse range of sizes, colors, and styles to perfectly complement your property. Whether you're seeking enhanced curb appeal for your home or a durable, functional solution for your business, we have the ideal garage door for you."
     },
     repair: {
       title: "Garage Door Repair",
+      mediaClass: "media-repair",
       body: "Is your garage door acting up? Whether it's stuck closed, refusing to open, or a spring has snapped, a broken garage door can be a major inconvenience and a safety concern. To ensure safe and reliable operation, both your garage door and opener require periodic inspection and maintenance. We're here to handle all your garage door repair needs, big or small. Don't risk your personal safety by attempting a DIY fix — contact us today for professional and prompt service!"
     },
     opener: {
       title: "Garage Door Openers",
+      mediaClass: "media-openers",
       body: "Experience the unparalleled convenience and security a modern garage door opener provides. When you choose us, you'll gain access to a wide selection of garage door openers, ensuring you find the perfect model to suit your lifestyle and needs. From advanced features to reliable performance, we offer options that make accessing your garage effortless."
     }
   };
@@ -26,12 +29,16 @@
   var modal = $("[data-modal]");
   var modalTitle = $("[data-modal-title]");
   var modalBody = $("[data-modal-body]");
+  var modalPhoto = $("[data-modal-photo]");
 
   function openModal(key) {
     var svc = SERVICES[key];
     if (!svc || !modal) return;
     modalTitle.textContent = svc.title;
     modalBody.textContent = svc.body;
+    if (modalPhoto) {
+      modalPhoto.className = "photo-slot modal__photo media-image " + svc.mediaClass;
+    }
     modal.classList.add("is-open");
     document.body.style.overflow = "hidden";
   }
