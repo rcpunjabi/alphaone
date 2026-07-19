@@ -1,6 +1,6 @@
-# Alpha One Garage Doors Website
+# Alpha One Garage Door Service Website
 
-Static HTML/CSS/JS website for Alpha One Garage Doors.
+Static HTML/CSS/JS website for Alpha One Garage Door Service.
 
 ## Current Hosting Workflow
 

@@ -1,4 +1,4 @@
-/* Alpha One Garage Doors — site interactions
+/* Alpha One Garage Door Service — site interactions
    Ported from the brand design system's component logic. */
 (function () {
   "use strict";
@@ -18,7 +18,7 @@
     opener: {
       title: "Garage Door Openers",
       mediaClass: "media-openers",
-      body: "Experience the unparalleled convenience and security a modern garage door opener provides. When you choose us, you'll gain access to a wide selection of garage door openers, ensuring you find the perfect model to suit your lifestyle and needs. From advanced features to reliable performance, we offer options that make accessing your garage effortless."
+      body: "A modern opener should be reliable, secure, and easy to use. We service and install belt, chain, screw-drive, and smart openers, then show you exactly how everything works before we leave."
     }
   };
 
