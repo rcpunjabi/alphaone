@@ -118,7 +118,12 @@
     if (!source || frame.getAttribute("src")) return;
     var wrap = frame.closest ? frame.closest(".ghl-form-wrap") : null;
     frame.addEventListener("load", function () {
-      if (wrap) wrap.classList.add("is-loaded");
+      // The GHL frame loads Roboto/Inter after its document arrives. Keep the
+      // reserved frame hidden briefly so those internal font swaps cannot
+      // contribute to the parent page's visible layout-shift score.
+      window.setTimeout(function () {
+        if (wrap) wrap.classList.add("is-loaded");
+      }, 1200);
     }, { once: true });
     frame.setAttribute("src", source);
   }
