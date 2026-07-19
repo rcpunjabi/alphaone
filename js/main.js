@@ -109,4 +109,45 @@
       if (contact) contact.scrollIntoView({ behavior: "smooth", block: "start" });
     });
   }
+
+  // ---- GoHighLevel forms ----
+  // Defer third-party form frames until a visitor approaches them. The fixed
+  // wrapper height is reserved in CSS so loading the form does not move content.
+  var ghlScriptRequested = false;
+  function loadGhlEmbedScript() {
+    if (ghlScriptRequested || document.querySelector('script[data-ghl-form-embed]')) return;
+    ghlScriptRequested = true;
+    var script = document.createElement("script");
+    script.src = "https://link.msgsndr.com/js/form_embed.js";
+    script.async = true;
+    script.setAttribute("data-ghl-form-embed", "");
+    document.body.appendChild(script);
+  }
+
+  function activateGhlForm(frame) {
+    var source = frame.getAttribute("data-src");
+    if (!source || frame.getAttribute("src")) return;
+    var wrap = frame.closest ? frame.closest(".ghl-form-wrap") : null;
+    frame.addEventListener("load", function () {
+      if (wrap) wrap.classList.add("is-loaded");
+    }, { once: true });
+    frame.setAttribute("src", source);
+    loadGhlEmbedScript();
+  }
+
+  var ghlForms = $all("iframe[data-ghl-lazy]");
+  if (ghlForms.length) {
+    if ("IntersectionObserver" in window) {
+      var formObserver = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (!entry.isIntersecting) return;
+          activateGhlForm(entry.target);
+          formObserver.unobserve(entry.target);
+        });
+      }, { rootMargin: "0px", threshold: 0.15 });
+      ghlForms.forEach(function (frame) { formObserver.observe(frame); });
+    } else {
+      ghlForms.forEach(activateGhlForm);
+    }
+  }
 })();
