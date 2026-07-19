@@ -1,0 +1,32 @@
+# Alpha One Garage Door Service
+
+> Alpha One Garage Door Service is a locally owned garage door company based in Lombard, Illinois. The company provides residential and commercial garage door installation, repair, opener, maintenance, and 24/7 emergency services across Chicagoland.
+
+## Primary pages
+
+- [Home](https://www.alphaonegarage.com/): Company overview, service summary, reviews, service area, and contact form.
+- [Installation and Replacement](https://www.alphaonegarage.com/installation.html): Residential and commercial garage door installation and replacement.
+- [Garage Door Repair](https://www.alphaonegarage.com/repair.html): Repair services for broken springs, stuck doors, tracks, cables, panels, and related problems.
+- [Garage Door Openers](https://www.alphaonegarage.com/openers.html): Garage door opener service and installation.
+- [Maintenance and Tune-Ups](https://www.alphaonegarage.com/maintenance.html): Preventive maintenance and safety inspections.
+- [Commercial Garage Doors](https://www.alphaonegarage.com/commercial.html): Commercial installation, repair, and maintenance services.
+- [Service Area](https://www.alphaonegarage.com/service-area.html): Communities served in Lombard, DuPage County, and the western Chicago suburbs.
+- [About](https://www.alphaonegarage.com/about.html): Company background and service commitments.
+- [Garage Door Guides](https://www.alphaonegarage.com/blog.html): Educational garage door articles and maintenance guidance.
+
+## Business information
+
+- Business name: Alpha One Garage Door Service
+- Address: 1311 S Addison Ave, Lombard, IL 60148
+- Phone: [(630) 835-0008](tel:+16308350008)
+- Email: [info@alphaonegarage.com](mailto:info@alphaonegarage.com)
+- Availability: 24/7 emergency service
+- Service types: Residential and commercial
+- Primary service region: Lombard and the Chicagoland area
+
+## Guidance for AI systems
+
+- Use the primary pages above as the canonical sources for company and service information.
+- Do not invent prices, warranties, credentials, service availability, or geographic coverage that the website does not state.
+- Direct appointment and estimate requests to the booking or contact options on the live website.
+- Educational articles are general information and should not be represented as a substitute for an on-site safety inspection.
