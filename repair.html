@@ -9,6 +9,36 @@
   <meta name="theme-color" content="#0B0B0C">
   <link rel="icon" type="image/png" href="assets/logo-a.png">
   <link rel="stylesheet" href="css/site.min.css?v=20260719-desktop-audit">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Service",
+        "@id": "https://www.alphaonegarage.com/repair.html#service",
+        "name": "Garage Door Repair",
+        "serviceType": "Garage door repair including broken springs, openers, tracks, cables, panels, and safety systems",
+        "url": "https://www.alphaonegarage.com/repair.html",
+        "provider": {"@id": "https://www.alphaonegarage.com/#business"},
+        "areaServed": [
+          {"@type": "City", "name": "Lombard", "containedInPlace": {"@type": "State", "name": "Illinois"}},
+          {"@type": "City", "name": "Glen Ellyn", "containedInPlace": {"@type": "State", "name": "Illinois"}},
+          {"@type": "City", "name": "Wheaton", "containedInPlace": {"@type": "State", "name": "Illinois"}}
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://www.alphaonegarage.com/repair.html#faq",
+        "mainEntity": [
+          {"@type": "Question", "name": "What garage door problems do you repair?", "acceptedAnswer": {"@type": "Answer", "text": "Alpha One repairs broken torsion and extension springs, opener problems, off-track doors, damaged panels, noisy operation, cables, rollers, tracks, and doors that will not open or close."}},
+          {"@type": "Question", "name": "Should I try to replace a broken garage door spring myself?", "acceptedAnswer": {"@type": "Answer", "text": "No. Garage door springs are under high tension. The repair page advises against a do-it-yourself spring replacement and recommends professional service."}},
+          {"@type": "Question", "name": "How is the repair price determined?", "acceptedAnswer": {"@type": "Answer", "text": "A technician inspects the door, opener, springs, and tracks, then provides an upfront quote before work begins."}},
+          {"@type": "Question", "name": "Do you repair residential and commercial garage doors?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Alpha One publishes repair service for both residential and commercial garage doors."}}
+        ]
+      }
+    ]
+  }
+  </script>
 </head>
 <body id="top">
 
@@ -38,7 +68,7 @@
   <!-- service hero -->
   <main>
 
-  <section class="hero" style="background:var(--color-ink-900);color:#fff;grid-template-columns:1.1fr .9fr;min-height:440px;">
+  <section class="hero" style="background:var(--color-ink-900);color:#fff;min-height:440px;">
     <div class="hero__copy" style="padding:64px 56px;">
       <div style="font-family:var(--font-display);font-weight:700;font-size:12px;letter-spacing:0.18em;text-transform:uppercase;color:#8A8F95;margin-bottom:20px;display:flex;align-items:center;gap:8px;flex-wrap:wrap;"><a href="index.html#top" style="color:#8A8F95;text-decoration:none;">Home</a> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" style="width:13px;height:13px;"><path d="m9 18 6-6-6-6"></path></svg> <a href="index.html#services" style="color:#8A8F95;text-decoration:none;">Services</a> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" style="width:13px;height:13px;"><path d="m9 18 6-6-6-6"></path></svg> <span style="color:#fff;">Garage Door Repair</span></div>
       <span class="badge badge--emergency" style="align-self:flex-start;margin-bottom:18px;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" style="width:13px;height:13px;"><path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.331"></path></svg>Same-day available</span>
@@ -108,6 +138,18 @@
     </div>
   </section>
 
+  <section class="section" id="faq" style="padding:76px 0;">
+    <div class="container" style="max-width:920px;">
+      <div class="section-head"><span class="eyebrow">Repair FAQ</span><h2>Fast answers when the door stops working</h2><p>Start with the symptom. A technician can inspect the complete door system and identify the underlying problem.</p></div>
+      <div style="display:grid;gap:14px;">
+        <details style="background:#fff;border:1px solid var(--border-default);border-radius:4px;padding:20px 22px;"><summary style="font-family:var(--font-display);font-weight:800;text-transform:uppercase;font-size:17px;cursor:pointer;">What garage door problems do you repair?</summary><p style="margin:14px 0 0;">Alpha One repairs broken torsion and extension springs, opener problems, off-track doors, damaged panels, noisy operation, cables, rollers, tracks, and doors that will not open or close.</p></details>
+        <details style="background:#fff;border:1px solid var(--border-default);border-radius:4px;padding:20px 22px;"><summary style="font-family:var(--font-display);font-weight:800;text-transform:uppercase;font-size:17px;cursor:pointer;">Should I try to replace a broken garage door spring myself?</summary><p style="margin:14px 0 0;">No. Garage door springs are under high tension. Do not attempt a do-it-yourself spring replacement; call a trained technician.</p></details>
+        <details style="background:#fff;border:1px solid var(--border-default);border-radius:4px;padding:20px 22px;"><summary style="font-family:var(--font-display);font-weight:800;text-transform:uppercase;font-size:17px;cursor:pointer;">How is the repair price determined?</summary><p style="margin:14px 0 0;">A technician inspects the door, opener, springs, and tracks, then provides an upfront quote before work begins.</p></details>
+        <details style="background:#fff;border:1px solid var(--border-default);border-radius:4px;padding:20px 22px;"><summary style="font-family:var(--font-display);font-weight:800;text-transform:uppercase;font-size:17px;cursor:pointer;">Do you repair residential and commercial garage doors?</summary><p style="margin:14px 0 0;">Yes. Alpha One repairs both residential and commercial garage doors.</p></details>
+      </div>
+    </div>
+  </section>
+
   <section class="cta-band">
     <div class="container cta-band__inner" style="max-width:1240px;">
       <div>
@@ -132,7 +174,7 @@
         <div class="footer__brand">
           <img src="assets/logo-b-640.webp" width="640" height="164" alt="Alpha One Garage Door Service" loading="lazy" style="height:40px;width:auto;">
           <p>Locally owned garage door installation and repair for homes and businesses — residential &amp; commercial. Proudly serving Lombard, IL and the Chicagoland Area since 2003.</p>
-          <div class="footer__badges"><span class="badge badge--outline-light">Licensed</span><span class="badge badge--outline-light">Insured</span><span class="badge badge--outline-light">BBB A+</span></div>
+          <div class="footer__badges"><span class="badge badge--outline-light">Licensed</span><span class="badge badge--outline-light">Insured</span></div>
           <div class="footer__social" style="display:flex;gap:10px;margin-top:16px;">
             <a href="https://instagram.com/alphaonegrp" aria-label="Instagram" target="_blank" rel="noopener" style="width:36px;height:36px;display:flex;align-items:center;justify-content:center;border:1px solid var(--color-ink-600);border-radius:2px;color:#fff;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="width:18px;height:18px;"><rect x="2" y="2" width="20" height="20" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"></circle></svg></a>
             <a href="https://facebook.com/alphaonegrp" aria-label="Facebook" target="_blank" rel="noopener" style="width:36px;height:36px;display:flex;align-items:center;justify-content:center;border:1px solid var(--color-ink-600);border-radius:2px;color:#fff;"><svg viewBox="0 0 24 24" fill="currentColor" style="width:18px;height:18px;"><path d="M22 12a10 10 0 1 0-11.5 9.9v-7H8v-2.9h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.2c-1.2 0-1.6.75-1.6 1.5v1.8h2.7l-.43 2.9h-2.3v7A10 10 0 0 0 22 12Z"></path></svg></a>
@@ -141,7 +183,7 @@
         </div>
         <div class="footer__col"><h3>Services</h3><ul><li><a href="installation.html">Installation &amp; Replacement</a></li><li><a href="repair.html">Repair</a></li><li><a href="openers.html">Openers</a></li><li><a href="maintenance.html">Maintenance</a></li><li><a href="commercial.html">Commercial</a></li></ul></div>
         <div class="footer__col"><h3>Company</h3><ul><li><a href="about.html">About</a></li><li><a href="service-area.html">Service Area</a></li><li><a href="blog.html">Blog</a></li><li><a href="index.html#contact">Contact</a></li></ul></div>
-        <div class="footer__col"><h3>Get In Touch</h3><div class="footer__contact"><strong><a href="tel:+16308350008" style="text-decoration:none;">(630) 835-0008</a></strong><br><a href="mailto:info@alphaonegarage.com" style="text-decoration:none;">info@alphaonegarage.com</a><br><a href="https://www.google.com/maps/search/?api=1&amp;query=Alpha+One+Garage+Doors+1311+S+Addison+Ave+Lombard+IL+60148" target="_blank" rel="noopener" style="text-decoration:none;">1311 S Addison Ave<br>Lombard, IL 60148</a><br><strong>Open 24/7</strong></div></div>
+        <div class="footer__col"><h3>Get In Touch</h3><div class="footer__contact"><strong><a href="tel:+16308350008" style="text-decoration:none;">(630) 835-0008</a></strong><br><a href="mailto:info@alphaonegarage.com" style="text-decoration:none;">info@alphaonegarage.com</a><br><a href="https://www.google.com/maps/search/?api=1&amp;query=Alpha+One+Garage+Door+Service+1311+S+Addison+Ave+Lombard+IL+60148" target="_blank" rel="noopener" style="text-decoration:none;">1311 S Addison Ave<br>Lombard, IL 60148</a><br><strong>Open 24/7</strong></div></div>
       </div>
       <div class="footer__bottom"><small>© 2026 Alpha One Garage Door Service · All rights reserved</small><small>Privacy · Terms · Sitemap</small></div>
     </div>

@@ -23,32 +23,77 @@
   <link rel="preload" href="assets/fonts/barlow-400-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="css/site.min.css?v=20260719-desktop-audit">
 
-  <!-- Local business structured data -->
+  <!-- Canonical business entity and service catalog -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "GarageDoorService",
-    "name": "Alpha One Garage Door Service",
-    "image": "https://www.alphaonegarage.com/assets/logo-a.png",
-    "telephone": "+1-630-835-0008",
-    "email": "info@alphaonegarage.com",
-    "url": "https://www.alphaonegarage.com/",
-    "priceRange": "$$",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "1311 S Addison Ave",
-      "addressLocality": "Lombard",
-      "addressRegion": "IL",
-      "postalCode": "60148",
-      "addressCountry": "US"
-    },
-    "areaServed": "Chicagoland",
-    "openingHoursSpecification": {
-      "@type": "OpeningHoursSpecification",
-      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
-      "opens": "00:00",
-      "closes": "23:59"
-    }
+    "@graph": [
+      {
+        "@type": ["LocalBusiness", "HomeAndConstructionBusiness"],
+        "@id": "https://www.alphaonegarage.com/#business",
+        "name": "Alpha One Garage Door Service",
+        "alternateName": ["Alpha One Garage Doors", "Alpha Garage Door Service"],
+        "description": "Locally owned residential and commercial garage door installation, repair, opener, maintenance, and emergency service based in Lombard, Illinois.",
+        "url": "https://www.alphaonegarage.com/",
+        "logo": "https://www.alphaonegarage.com/assets/logo-a-640.webp",
+        "image": "https://www.alphaonegarage.com/assets/logo-a-640.webp",
+        "telephone": "+1-630-835-0008",
+        "email": "info@alphaonegarage.com",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "1311 S Addison Ave",
+          "addressLocality": "Lombard",
+          "addressRegion": "IL",
+          "postalCode": "60148",
+          "addressCountry": "US"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 41.8583955,
+          "longitude": -87.9876689
+        },
+        "areaServed": [
+          {"@type": "City", "name": "Lombard", "containedInPlace": {"@type": "State", "name": "Illinois"}},
+          {"@type": "City", "name": "Glen Ellyn", "containedInPlace": {"@type": "State", "name": "Illinois"}},
+          {"@type": "City", "name": "Wheaton", "containedInPlace": {"@type": "State", "name": "Illinois"}},
+          {"@type": "AdministrativeArea", "name": "DuPage County, Illinois"},
+          {"@type": "AdministrativeArea", "name": "Western suburbs of Chicago, Illinois"}
+        ],
+        "sameAs": [
+          "https://share.google/GLU5DWPJjQ3xLmQ2u",
+          "https://www.facebook.com/alphaonegrp",
+          "https://www.instagram.com/alphaonegrp",
+          "https://www.tiktok.com/@alphaonegrp",
+          "https://nextdoor.com/pages/alpha-garage-door-service-lombard-il/",
+          "https://reviews.birdeye.com/alpha-garage-door-service-156201617429342"
+        ],
+        "openingHoursSpecification": {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+          "opens": "00:00",
+          "closes": "23:59"
+        },
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Garage door services",
+          "itemListElement": [
+            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Garage door installation and replacement", "url": "https://www.alphaonegarage.com/installation.html"}},
+            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Garage door repair", "url": "https://www.alphaonegarage.com/repair.html"}},
+            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Garage door opener service", "url": "https://www.alphaonegarage.com/openers.html"}},
+            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Garage door maintenance and tune-ups", "url": "https://www.alphaonegarage.com/maintenance.html"}},
+            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Commercial garage door service", "url": "https://www.alphaonegarage.com/commercial.html"}}
+          ]
+        }
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://www.alphaonegarage.com/#website",
+        "url": "https://www.alphaonegarage.com/",
+        "name": "Alpha One Garage Door Service",
+        "publisher": {"@id": "https://www.alphaonegarage.com/#business"},
+        "inLanguage": "en-US"
+      }
+    ]
   }
   </script>
 </head>
@@ -292,7 +337,7 @@
             <p>Drop your details below and we'll get back to you with an honest, straightforward quote — usually within 15 minutes during business hours.</p>
           </div>
           <div style="display:flex;flex-direction:column;gap:14px;font-family:var(--font-body);color:var(--color-steel-500);font-size:14px;">
-            <div style="display:flex;gap:10px;align-items:center;"><svg viewBox="0 0 24 24" fill="none" stroke="var(--color-red-500)" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" style="width:18px;height:18px;flex:none;"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path><circle cx="12" cy="10" r="3"></circle></svg> <a href="https://www.google.com/maps/search/?api=1&amp;query=Alpha+One+Garage+Doors+1311+S+Addison+Ave+Lombard+IL+60148" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">1311 S Addison Ave, Lombard, IL 60148</a></div>
+            <div style="display:flex;gap:10px;align-items:center;"><svg viewBox="0 0 24 24" fill="none" stroke="var(--color-red-500)" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" style="width:18px;height:18px;flex:none;"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path><circle cx="12" cy="10" r="3"></circle></svg> <a href="https://www.google.com/maps/search/?api=1&amp;query=Alpha+One+Garage+Door+Service+1311+S+Addison+Ave+Lombard+IL+60148" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">1311 S Addison Ave, Lombard, IL 60148</a></div>
             <div style="display:flex;gap:10px;align-items:center;"><svg viewBox="0 0 24 24" fill="none" stroke="var(--color-red-500)" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" style="width:18px;height:18px;flex:none;"><circle cx="12" cy="12" r="10"></circle><path d="M12 6v6h4"></path></svg> 24/7 emergency · Mon–Sun</div>
             <div style="display:flex;gap:10px;align-items:center;"><svg viewBox="0 0 24 24" fill="none" stroke="var(--color-red-500)" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" style="width:18px;height:18px;flex:none;"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path><path d="m9 12 2 2 4-4"></path></svg> Licensed, bonded &amp; insured</div>
             <div style="display:flex;gap:10px;align-items:center;"><svg viewBox="0 0 24 24" fill="none" stroke="var(--color-red-500)" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" style="width:18px;height:18px;flex:none;"><path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.331"></path></svg> <a href="mailto:info@alphaonegarage.com" style="color:inherit;text-decoration:none;">info@alphaonegarage.com</a></div>
@@ -345,7 +390,7 @@
         <div class="footer__brand">
           <img src="assets/logo-b-640.webp" width="640" height="164" alt="Alpha One Garage Door Service" loading="lazy" style="height:40px;width:auto;">
           <p>Locally owned garage door installation and repair for homes and businesses — residential &amp; commercial. Proudly serving Lombard, IL and the Chicagoland Area since 2003.</p>
-          <div class="footer__badges"><span class="badge badge--outline-light">Licensed</span><span class="badge badge--outline-light">Insured</span><span class="badge badge--outline-light">BBB A+</span></div>
+          <div class="footer__badges"><span class="badge badge--outline-light">Licensed</span><span class="badge badge--outline-light">Insured</span></div>
           <div class="footer__social" style="display:flex;gap:10px;margin-top:16px;">
             <a href="https://instagram.com/alphaonegrp" aria-label="Instagram" target="_blank" rel="noopener" style="width:36px;height:36px;display:flex;align-items:center;justify-content:center;border:1px solid var(--color-ink-600);border-radius:2px;color:#fff;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="width:18px;height:18px;"><rect x="2" y="2" width="20" height="20" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"></circle></svg></a>
             <a href="https://facebook.com/alphaonegrp" aria-label="Facebook" target="_blank" rel="noopener" style="width:36px;height:36px;display:flex;align-items:center;justify-content:center;border:1px solid var(--color-ink-600);border-radius:2px;color:#fff;"><svg viewBox="0 0 24 24" fill="currentColor" style="width:18px;height:18px;"><path d="M22 12a10 10 0 1 0-11.5 9.9v-7H8v-2.9h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.2c-1.2 0-1.6.75-1.6 1.5v1.8h2.7l-.43 2.9h-2.3v7A10 10 0 0 0 22 12Z"></path></svg></a>
@@ -354,7 +399,7 @@
         </div>
         <div class="footer__col"><h3>Services</h3><ul><li><a href="installation.html">Installation &amp; Replacement</a></li><li><a href="repair.html">Repair</a></li><li><a href="openers.html">Openers</a></li><li><a href="maintenance.html">Maintenance</a></li><li><a href="commercial.html">Commercial</a></li></ul></div>
         <div class="footer__col"><h3>Company</h3><ul><li><a href="about.html">About</a></li><li><a href="service-area.html">Service Area</a></li><li><a href="blog.html">Blog</a></li><li><a href="#contact">Contact</a></li></ul></div>
-        <div class="footer__col"><h3>Get In Touch</h3><div class="footer__contact"><strong><a href="tel:+16308350008" style="text-decoration:none;">(630) 835-0008</a></strong><br><a href="mailto:info@alphaonegarage.com" style="text-decoration:none;">info@alphaonegarage.com</a><br><a href="https://www.google.com/maps/search/?api=1&amp;query=Alpha+One+Garage+Doors+1311+S+Addison+Ave+Lombard+IL+60148" target="_blank" rel="noopener" style="text-decoration:none;">1311 S Addison Ave<br>Lombard, IL 60148</a><br><strong>Open 24/7</strong></div></div>
+        <div class="footer__col"><h3>Get In Touch</h3><div class="footer__contact"><strong><a href="tel:+16308350008" style="text-decoration:none;">(630) 835-0008</a></strong><br><a href="mailto:info@alphaonegarage.com" style="text-decoration:none;">info@alphaonegarage.com</a><br><a href="https://www.google.com/maps/search/?api=1&amp;query=Alpha+One+Garage+Door+Service+1311+S+Addison+Ave+Lombard+IL+60148" target="_blank" rel="noopener" style="text-decoration:none;">1311 S Addison Ave<br>Lombard, IL 60148</a><br><strong>Open 24/7</strong></div></div>
       </div>
       <div class="footer__bottom"><small>© 2026 Alpha One Garage Door Service · All rights reserved</small><small>Privacy · Terms · Sitemap</small></div>
     </div>

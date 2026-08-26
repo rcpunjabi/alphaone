@@ -91,3 +91,17 @@ Before packaging, check:
 - Hero contact form.
 - Homepage service popups.
 - Service page hero illustrations.
+
+## GEO and structured data
+
+- Keep the canonical business name exactly `Alpha One Garage Door Service` in public titles, visible NAP details, and structured data.
+- The homepage owns the canonical `#business` entity, alternate historical names, verified profile links, geographic coordinates, service areas, and offer catalog.
+- Installation, repair, opener, and core-city pages reference that same `#business` ID and include source-matched `Service` and visible `FAQPage` data.
+- Regenerate the Lombard, Glen Ellyn, and Wheaton pages after editing their source data:
+
+  ```bash
+  node scripts/generate-city-pages.mjs
+  ```
+
+- Do not add a BBB rating or accreditation badge unless the exact Alpha One record is verified first.
+- When adding a location page, link it from `service-area.html`, `sitemap.xml`, and `llms.txt`; avoid copying claims, prices, reviews, or service coverage that the website does not already support.
