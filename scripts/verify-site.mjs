@@ -23,8 +23,8 @@ for (const file of htmlFiles) {
   if (mainCount !== 1) fail(file, `expected one main landmark, found ${mainCount}`);
   if (source.includes("BBB A+")) fail(file, "contains unverified BBB A+ claim");
   if ((source.match(/GTM-TL54H6R2/g) || []).length !== 2) fail(file, "expected GTM head and noscript snippets");
-  if (!source.includes("css/site.min.css?v=20260829-conversion-paths")) fail(file, "missing current CSS cache key");
-  if (!source.includes("js/main.min.js?v=20260829-conversion-paths")) fail(file, "missing current JavaScript cache key");
+  if (!source.includes("css/site.min.css?v=20260830-contact-page")) fail(file, "missing current CSS cache key");
+  if (!source.includes("js/main.min.js?v=20260830-contact-page")) fail(file, "missing current JavaScript cache key");
 
   for (const match of source.matchAll(/<script\s+type="application\/ld\+json">([\s\S]*?)<\/script>/gi)) {
     try {
@@ -68,6 +68,13 @@ if (!home.includes('class="mobile-action-bar"')) fail("index.html", "mobile Call
 for (const target of ["installation.html", "repair.html", "openers.html"]) {
   if (!home.includes(`href="${target}"`)) fail("index.html", `homepage service card is missing ${target}`);
 }
+if (!home.includes('href="contact.html"')) fail("index.html", "homepage is missing the dedicated contact-page route");
+
+const contact = readFileSync(join(root, "contact.html"), "utf8");
+const contactGhlFrameCount = (contact.match(/<iframe[\s\S]*?bKCXwQJwLrBYXMwhfEsa[\s\S]*?<\/iframe>/g) || []).length;
+if (contactGhlFrameCount !== 1) fail("contact.html", `expected one GHL iframe, found ${contactGhlFrameCount}`);
+if (!contact.includes('href="https://calendly.com/alphaonegrp/service" target="_blank" rel="noopener"')) fail("contact.html", "missing new-tab scheduler link");
+if (!contact.includes("1311 S Addison Ave")) fail("contact.html", "missing canonical location");
 
 if (errors.length) {
   console.error(errors.join("\n"));

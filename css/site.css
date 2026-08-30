@@ -536,6 +536,38 @@ a { color: inherit; }
 .contact-options-card__actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 24px; }
 
 /* -------------------------------------------------------------------------
+   Contact page
+   ------------------------------------------------------------------------- */
+
+.contact-hero { background: var(--color-ink-900); color: #fff; padding: 72px 0; }
+.contact-hero__inner { max-width: 1240px; }
+.contact-hero h1 { max-width: 15ch; margin: 18px 0; font-family: var(--font-display); font-size: clamp(42px, 6vw, 72px); font-weight: 850; line-height: .96; letter-spacing: -.02em; text-transform: uppercase; }
+.contact-hero h1 em { color: var(--color-red-500); font-style: normal; }
+.contact-hero p { max-width: 62ch; margin: 0; color: #d8dadd; font-family: var(--font-body); font-size: 19px; line-height: 1.6; }
+.contact-page__grid { display: grid; grid-template-columns: minmax(0, .82fr) minmax(420px, 1.18fr); gap: 48px; align-items: start; }
+.contact-page__details { display: grid; gap: 18px; }
+.contact-page__details h2 { margin: 16px 0 8px; font-family: var(--font-display); font-size: clamp(34px, 4vw, 50px); line-height: 1; text-transform: uppercase; }
+.contact-page__details > p { margin: 0 0 8px; color: var(--color-steel-500); font-family: var(--font-body); font-size: 17px; line-height: 1.6; }
+.contact-detail { display: grid; grid-template-columns: 42px 1fr; gap: 14px; align-items: start; padding: 18px; border: 1px solid var(--border-subtle); background: #fff; }
+.contact-detail svg { width: 24px; height: 24px; color: var(--color-red-500); stroke: currentColor; }
+.contact-detail strong { display: block; margin-bottom: 4px; font-family: var(--font-display); font-size: 15px; letter-spacing: .08em; text-transform: uppercase; }
+.contact-detail a, .contact-detail span { color: var(--color-steel-500); font-family: var(--font-body); font-size: 15px; line-height: 1.5; text-decoration-thickness: 1px; text-underline-offset: 3px; }
+.contact-page__actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 8px; }
+.contact-page__form { padding: 26px; border: 2px solid var(--color-ink-900); border-radius: 4px; background: #fff; box-shadow: 8px 8px 0 var(--color-red-500); }
+.contact-page__form-head { margin-bottom: 18px; }
+.contact-page__form-head h2 { margin: 12px 0 8px; font-family: var(--font-display); font-size: clamp(28px, 3vw, 40px); line-height: 1; text-transform: uppercase; }
+.contact-page__form-head p { margin: 0; color: var(--color-steel-500); font-family: var(--font-body); line-height: 1.55; }
+.contact-services__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.contact-location { display: grid; grid-template-columns: 1.1fr .9fr; gap: 32px; align-items: stretch; }
+.contact-location__panel { padding: 36px; border: 2px solid var(--color-ink-900); background: #fff; box-shadow: 5px 5px 0 var(--color-ink-900); }
+.contact-location__panel h2, .contact-location__panel h3 { margin: 16px 0 12px; font-family: var(--font-display); text-transform: uppercase; }
+.contact-location__panel h2 { font-size: clamp(32px, 4vw, 48px); line-height: 1; }
+.contact-location__panel h3 { font-size: 24px; }
+.contact-location__panel p { color: var(--color-steel-500); font-family: var(--font-body); font-size: 16px; line-height: 1.65; }
+.contact-location__areas { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 20px; }
+.contact-location__areas span { padding: 8px 11px; border: 1px solid var(--border-subtle); background: var(--color-bone-50); font-family: var(--font-display); font-size: 12px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; }
+
+/* -------------------------------------------------------------------------
    Footer
    ------------------------------------------------------------------------- */
 
@@ -723,6 +755,14 @@ section { scroll-margin-top: 84px; }
   .mobile-action-bar__call { background: var(--color-red-500); }
   .mobile-action-bar__text { background: var(--color-ink-900); }
   .mobile-action-bar a:focus-visible { outline: 3px solid var(--color-yellow-500); outline-offset: -4px; }
+  .contact-hero { padding: 56px 0; }
+  .contact-page__form, .contact-location__panel { padding: 24px; }
+}
+
+@media (max-width: 900px) {
+  .contact-page__grid, .contact-location { grid-template-columns: 1fr; }
+  .contact-page__form { max-width: 680px; width: 100%; }
+  .contact-services__grid { grid-template-columns: 1fr; }
 }
 
 /* --- overflow guard + mobile emergency banner fixes --- */

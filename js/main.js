@@ -9,7 +9,7 @@
       title: "Garage Door Installation and Replacement",
       mediaClass: "media-installation",
       body: "Looking to upgrade your home or business with a new or replacement garage door? We offer a wide selection of garage doors to fit every need and aesthetic. Choose from a diverse range of sizes, colors, and styles to perfectly complement your property. Whether you're seeking enhanced curb appeal for your home or a durable, functional solution for your business, we have the ideal garage door for you.",
-      primaryHref: "#contact",
+      primaryHref: "contact.html",
       primaryLabel: "Request Estimate",
       detailsHref: "installation.html",
       detailsLabel: "View Installation Details"

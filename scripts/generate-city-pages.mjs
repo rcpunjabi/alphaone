@@ -57,7 +57,7 @@ const footer = `
           </div>
         </div>
         <div class="footer__col"><h3>Services</h3><ul><li><a href="installation.html">Installation &amp; Replacement</a></li><li><a href="repair.html">Repair</a></li><li><a href="openers.html">Openers</a></li><li><a href="maintenance.html">Maintenance</a></li><li><a href="commercial.html">Commercial</a></li></ul></div>
-        <div class="footer__col"><h3>Company</h3><ul><li><a href="about.html">About</a></li><li><a href="service-area.html">Service Area</a></li><li><a href="blog.html">Blog</a></li><li><a href="index.html#contact">Contact</a></li></ul></div>
+        <div class="footer__col"><h3>Company</h3><ul><li><a href="about.html">About</a></li><li><a href="service-area.html">Service Area</a></li><li><a href="blog.html">Blog</a></li><li><a href="contact.html">Contact</a></li></ul></div>
         <div class="footer__col"><h3>Get In Touch</h3><div class="footer__contact"><strong><a href="tel:+16308350008" style="text-decoration:none;">(630) 835-0008</a></strong><br><a href="mailto:info@alphaonegarage.com" style="text-decoration:none;">info@alphaonegarage.com</a><br><a href="https://www.google.com/maps/search/?api=1&amp;query=Alpha+One+Garage+Door+Service+1311+S+Addison+Ave+Lombard+IL+60148" target="_blank" rel="noopener" style="text-decoration:none;">1311 S Addison Ave<br>Lombard, IL 60148</a><br><strong>Open 24/7</strong></div></div>
       </div>
       <div class="footer__bottom"><small>© 2026 Alpha One Garage Door Service · All rights reserved</small><small>Privacy · Terms · Sitemap</small></div>
@@ -124,7 +124,7 @@ function page(city) {
   <meta property="og:url" content="https://www.alphaonegarage.com/${city.slug}.html">
   <meta property="og:image" content="https://www.alphaonegarage.com/assets/logo-a-640.webp">
   <link rel="icon" type="image/png" href="assets/logo-a.png">
-  <link rel="stylesheet" href="css/site.min.css?v=20260829-conversion-paths">
+  <link rel="stylesheet" href="css/site.min.css?v=20260830-contact-page">
   <script type="application/ld+json">${JSON.stringify(schema, null, 2)}</script>
 </head>
 <body id="top">
@@ -145,7 +145,7 @@ function page(city) {
   <header class="header">
     <div class="header__inner">
       <a class="header__logo" href="index.html#top"><img src="assets/logo-a-640.webp" width="640" height="164" alt="Alpha One Garage Door Service" fetchpriority="high" style="height:38px;width:auto;"></a>
-      <nav class="header__nav"><a href="index.html#top">Home</a><a href="index.html#services">Services</a><a href="commercial.html">Commercial</a><a href="about.html">About</a><a href="index.html#contact">Contact</a></nav>
+      <nav class="header__nav"><a href="index.html#top">Home</a><a href="index.html#services">Services</a><a href="commercial.html">Commercial</a><a href="about.html">About</a><a href="contact.html">Contact</a></nav>
       <div class="header__cta">
         <a class="header__phone" href="tel:+16308350008"><div><span class="header__phone-label">Call 24/7</span><span>(630) 835-0008</span></div></a>
         <a class="btn btn--primary btn--sm" href="https://calendly.com/alphaonegrp/service" target="_blank" rel="noopener"><span>Book Online</span></a>
@@ -162,7 +162,7 @@ function page(city) {
         <h1 style="font-family:var(--font-display);font-weight:800;font-size:clamp(40px,6vw,64px);line-height:.95;letter-spacing:-0.015em;text-transform:uppercase;margin:0 0 18px;">Garage Door Service in ${city.name}, Illinois</h1>
         <p style="font-family:var(--font-body);font-size:19px;line-height:1.5;color:#D8DADD;max-width:52ch;margin:0 0 30px;">${city.intro}</p>
         <div style="display:flex;gap:14px;flex-wrap:wrap;">
-          <a class="btn btn--primary" href="https://calendly.com/alphaonegrp/service" target="_blank" rel="noopener"><span>Book Free Estimate</span></a>
+          <a class="btn btn--primary" href="contact.html"><span>Request Free Estimate</span></a>
           <a class="btn btn--ghost-light" href="tel:+16308350008"><span>Call (630) 835-0008</span></a>
         </div>
       </div>
@@ -209,11 +209,11 @@ ${footer}
 
   <div class="drawer" data-drawer>
     <div class="drawer__top"><img src="assets/logo-b-640.webp" width="640" height="164" alt="Alpha One" loading="lazy"><button class="drawer__close" aria-label="Close menu" data-drawer-close>×</button></div>
-    <nav><a href="index.html#top" data-drawer-close>Home</a><a href="index.html#services" data-drawer-close>Services</a><a href="commercial.html" data-drawer-close>Commercial</a><a href="service-area.html" data-drawer-close>Service Area</a><a href="about.html" data-drawer-close>About</a><a href="blog.html" data-drawer-close>Blog</a><a href="index.html#contact" data-drawer-close>Contact</a></nav>
+    <nav><a href="index.html#top" data-drawer-close>Home</a><a href="index.html#services" data-drawer-close>Services</a><a href="commercial.html" data-drawer-close>Commercial</a><a href="service-area.html" data-drawer-close>Service Area</a><a href="about.html" data-drawer-close>About</a><a href="blog.html" data-drawer-close>Blog</a><a href="contact.html" data-drawer-close>Contact</a></nav>
     <div class="drawer__foot"><a class="btn btn--primary" href="tel:+16308350008" style="width:100%;justify-content:center;"><span>Call (630) 835-0008</span></a></div>
   </div>
 
-  <script src="js/main.min.js?v=20260829-conversion-paths"></script>
+  <script src="js/main.min.js?v=20260830-contact-page"></script>
 </body>
 </html>
 `;
