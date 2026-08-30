@@ -22,6 +22,9 @@ for (const file of htmlFiles) {
   if (h1Count !== 1) fail(file, `expected one H1, found ${h1Count}`);
   if (mainCount !== 1) fail(file, `expected one main landmark, found ${mainCount}`);
   if (source.includes("BBB A+")) fail(file, "contains unverified BBB A+ claim");
+  if ((source.match(/GTM-TL54H6R2/g) || []).length !== 2) fail(file, "expected GTM head and noscript snippets");
+  if (!source.includes("css/site.min.css?v=20260829-conversion-paths")) fail(file, "missing current CSS cache key");
+  if (!source.includes("js/main.min.js?v=20260829-conversion-paths")) fail(file, "missing current JavaScript cache key");
 
   for (const match of source.matchAll(/<script\s+type="application\/ld\+json">([\s\S]*?)<\/script>/gi)) {
     try {
@@ -33,7 +36,7 @@ for (const file of htmlFiles) {
 
   for (const match of source.matchAll(/(?:href|src|data-src)="([^"]+)"/gi)) {
     const raw = match[1].replaceAll("&amp;", "&");
-    if (/^(?:https?:|mailto:|tel:|data:|#)/i.test(raw)) continue;
+    if (/^(?:https?:|mailto:|tel:|sms:|data:|#)/i.test(raw)) continue;
     const target = raw.split(/[?#]/, 1)[0];
     if (!target) continue;
     const path = join(root, target);
@@ -56,7 +59,15 @@ if (!robots.includes("Sitemap: https://www.alphaonegarage.com/sitemap.xml")) fai
 const home = readFileSync(join(root, "index.html"), "utf8");
 if (!home.includes('"@id": "https://www.alphaonegarage.com/#business"')) fail("index.html", "missing canonical business entity ID");
 if (!home.includes('"name": "Alpha One Garage Door Service"')) fail("index.html", "missing canonical business name");
-if ((home.match(/bKCXwQJwLrBYXMwhfEsa/g) || []).length < 4) fail("index.html", "GHL form ID references changed or are missing");
+const ghlFrameCount = (home.match(/<iframe[\s\S]*?bKCXwQJwLrBYXMwhfEsa[\s\S]*?<\/iframe>/g) || []).length;
+if (ghlFrameCount !== 1) fail("index.html", `expected one GHL iframe, found ${ghlFrameCount}`);
+if (home.includes("data-ghl-lazy")) fail("index.html", "primary GHL form must not be lazy-loaded");
+if (!home.includes("data-ghl-form")) fail("index.html", "primary GHL form marker is missing");
+if (!home.includes('class="form-fallback"')) fail("index.html", "visible form fallback is missing");
+if (!home.includes('class="mobile-action-bar"')) fail("index.html", "mobile Call/Text action bar is missing");
+for (const target of ["installation.html", "repair.html", "openers.html"]) {
+  if (!home.includes(`href="${target}"`)) fail("index.html", `homepage service card is missing ${target}`);
+}
 
 if (errors.length) {
   console.error(errors.join("\n"));

@@ -451,13 +451,16 @@ a { color: inherit; }
 .trust__item svg { width: 28px; height: 28px; stroke: var(--color-red-500); stroke-width: 1.75; flex: 0 0 auto; }
 .trust__item .l1 { font-family: var(--font-display); font-weight: 700; font-size: 14px; letter-spacing: 0.04em; text-transform: uppercase; color: var(--color-ink-900); line-height: 1; }
 .trust__item .l2 { font-family: var(--font-body); font-size: 12px; color: var(--fg-muted); line-height: 1; margin-top: 4px; }
+.trust__link { color: inherit; text-decoration: none; }
+.trust__link:hover .l1, .trust__link:focus-visible .l1 { color: var(--color-red-500); }
+.trust__link:focus-visible { outline: 3px solid var(--color-red-500); outline-offset: -3px; }
 
 /* -------------------------------------------------------------------------
    Services grid
    ------------------------------------------------------------------------- */
 
 .services__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
-.service-card { background: #fff; border: 2px solid var(--color-ink-900); border-radius: 4px; box-shadow: 4px 4px 0 var(--color-ink-900); padding: 0; display: flex; flex-direction: column; transition: transform var(--dur-fast), box-shadow var(--dur-fast); cursor: pointer; overflow: hidden; }
+.service-card { background: #fff; border: 2px solid var(--color-ink-900); border-radius: 4px; box-shadow: 4px 4px 0 var(--color-ink-900); padding: 0; display: flex; flex-direction: column; transition: transform var(--dur-fast), box-shadow var(--dur-fast); overflow: hidden; }
 .service-card:hover { transform: translate(-2px, -2px); box-shadow: 6px 6px 0 var(--color-red-500); }
 .service-card .photo { aspect-ratio: 4/3; }
 .service-card .body { padding: 28px; display: flex; flex-direction: column; gap: 14px; flex: 1; }
@@ -467,6 +470,11 @@ a { color: inherit; }
 .service-card p { font-family: var(--font-body); font-size: 14px; line-height: 1.5; color: var(--fg-muted); margin: 0; flex: 1; }
 .service-card .link { font-family: var(--font-display); font-weight: 700; font-size: 12px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--color-red-500); display: inline-flex; align-items: center; gap: 8px; padding-top: 8px; border-top: 1px solid var(--border-subtle); }
 .service-card .link svg { width: 14px; height: 14px; }
+.service-card__actions { display: grid; grid-template-columns: 1fr; gap: 8px; padding-top: 8px; border-top: 1px solid var(--border-subtle); }
+.service-card__preview, .service-card__details { min-height: 44px; display: flex; align-items: center; font-family: var(--font-display); font-weight: 700; font-size: 12px; letter-spacing: 0.14em; line-height: 1.2; text-transform: uppercase; text-align: left; text-decoration: none; }
+.service-card__preview { appearance: none; padding: 0; border: 0; background: transparent; color: var(--color-red-500); cursor: pointer; }
+.service-card__details { color: var(--color-ink-900); }
+.service-card__preview:hover, .service-card__preview:focus-visible, .service-card__details:hover, .service-card__details:focus-visible { text-decoration: underline; text-underline-offset: 3px; }
 
 /* -------------------------------------------------------------------------
    Pillars (How We Work)
@@ -522,6 +530,10 @@ a { color: inherit; }
 .quote .form-help { font-family: var(--font-body); font-size: 12px; color: var(--fg-muted); margin-top: 14px; }
 .quote .form__submit { margin-top: 20px; }
 .quote .success { background: var(--color-green-50); border: 1.5px solid var(--color-green-500); color: var(--color-green-600); padding: 16px; border-radius: 2px; font-family: var(--font-body); font-size: 14px; line-height: 1.5; margin-bottom: 18px; }
+.contact-options-card { background: #fff; border: 2px solid var(--color-ink-900); border-radius: 4px; box-shadow: 6px 6px 0 var(--color-ink-900); padding: 36px; }
+.contact-options-card h3 { font-family: var(--font-display); font-size: 30px; line-height: 1.05; text-transform: uppercase; margin: 20px 0 14px; }
+.contact-options-card p { font-family: var(--font-body); font-size: 16px; line-height: 1.6; color: var(--color-steel-500); }
+.contact-options-card__actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 24px; }
 
 /* -------------------------------------------------------------------------
    Footer
@@ -615,6 +627,12 @@ section { scroll-margin-top: 84px; }
 .ghl-form-wrap.is-loaded::before { display: none; }
 .ghl-form-wrap iframe { position: relative; z-index: 1; display: block; width: 100%; height: 905px; border: 0; opacity: 0; visibility: hidden; }
 .ghl-form-wrap.is-loaded iframe { opacity: 1; visibility: visible; }
+.form-fallback { margin-top: 14px; padding: 16px; background: var(--color-yellow-50); border: 1px solid var(--color-yellow-600); font-family: var(--font-body); font-size: 14px; line-height: 1.45; }
+.form-fallback strong, .form-fallback span { display: block; }
+.form-fallback__actions { display: flex; flex-wrap: wrap; gap: 10px 18px; margin-top: 10px; }
+.form-fallback__actions a { color: var(--color-ink-900); font-family: var(--font-display); font-weight: 800; font-size: 12px; letter-spacing: .1em; text-transform: uppercase; text-underline-offset: 3px; }
+
+.mobile-action-bar { display: none; }
 
 /* three-steps grid (was inline) */
 .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
@@ -686,6 +704,7 @@ section { scroll-margin-top: 84px; }
 
 /* phones */
 @media (max-width: 600px) {
+  body { padding-bottom: calc(64px + env(safe-area-inset-bottom)); }
   .container { padding: 0 20px; }
   .emerg { padding: 10px 16px; gap: 10px; font-size: 12px; }
   .emerg__lede { font-size: 12px; }
@@ -699,6 +718,11 @@ section { scroll-margin-top: 84px; }
   .mission h2 { font-size: clamp(30px, 8.8vw, 38px); line-height: 1.04; max-width: 12ch; margin-bottom: 0; }
   .mission__copy { max-width: 34rem; }
   .mission p { font-size: 16px; line-height: 1.65; }
+  .mobile-action-bar { position: fixed; z-index: 180; left: 0; right: 0; bottom: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 1px; padding-bottom: env(safe-area-inset-bottom); background: var(--color-ink-900); box-shadow: 0 -4px 18px rgba(11,11,12,.25); }
+  .mobile-action-bar a { min-height: 64px; display: grid; place-items: center; color: #fff; font-family: var(--font-display); font-weight: 800; font-size: 13px; letter-spacing: .12em; text-transform: uppercase; text-decoration: none; }
+  .mobile-action-bar__call { background: var(--color-red-500); }
+  .mobile-action-bar__text { background: var(--color-ink-900); }
+  .mobile-action-bar a:focus-visible { outline: 3px solid var(--color-yellow-500); outline-offset: -4px; }
 }
 
 /* --- overflow guard + mobile emergency banner fixes --- */

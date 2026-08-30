@@ -105,6 +105,13 @@ function page(city) {
   return `<!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-TL54H6R2');</script>
+  <!-- End Google Tag Manager -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Garage Door Service in ${city.name}, IL | Alpha One Garage Door Service</title>
@@ -117,10 +124,14 @@ function page(city) {
   <meta property="og:url" content="https://www.alphaonegarage.com/${city.slug}.html">
   <meta property="og:image" content="https://www.alphaonegarage.com/assets/logo-a-640.webp">
   <link rel="icon" type="image/png" href="assets/logo-a.png">
-  <link rel="stylesheet" href="css/site.min.css?v=20260719-desktop-audit">
+  <link rel="stylesheet" href="css/site.min.css?v=20260829-conversion-paths">
   <script type="application/ld+json">${JSON.stringify(schema, null, 2)}</script>
 </head>
 <body id="top">
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TL54H6R2"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
   <div>
     <div class="emerg">
       <span class="emerg__pulse"></span>
@@ -202,7 +213,7 @@ ${footer}
     <div class="drawer__foot"><a class="btn btn--primary" href="tel:+16308350008" style="width:100%;justify-content:center;"><span>Call (630) 835-0008</span></a></div>
   </div>
 
-  <script src="js/main.min.js?v=20260719-cls-stability"></script>
+  <script src="js/main.min.js?v=20260829-conversion-paths"></script>
 </body>
 </html>
 `;
