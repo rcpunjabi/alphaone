@@ -23,8 +23,8 @@ for (const file of htmlFiles) {
   if (mainCount !== 1) fail(file, `expected one main landmark, found ${mainCount}`);
   if (source.includes("BBB A+")) fail(file, "contains unverified BBB A+ claim");
   if ((source.match(/GTM-TL54H6R2/g) || []).length !== 2) fail(file, "expected GTM head and noscript snippets");
-  if (!source.includes("css/site.min.css?v=20260830-contact-page")) fail(file, "missing current CSS cache key");
-  if (!source.includes("js/main.min.js?v=20260830-contact-page")) fail(file, "missing current JavaScript cache key");
+  if (!source.includes("css/site.min.css?v=20260830-performance")) fail(file, "missing current CSS cache key");
+  if (!source.includes("js/main.min.js?v=20260830-performance")) fail(file, "missing current JavaScript cache key");
 
   for (const match of source.matchAll(/<script\s+type="application\/ld\+json">([\s\S]*?)<\/script>/gi)) {
     try {
@@ -60,10 +60,8 @@ const home = readFileSync(join(root, "index.html"), "utf8");
 if (!home.includes('"@id": "https://www.alphaonegarage.com/#business"')) fail("index.html", "missing canonical business entity ID");
 if (!home.includes('"name": "Alpha One Garage Door Service"')) fail("index.html", "missing canonical business name");
 const ghlFrameCount = (home.match(/<iframe[\s\S]*?bKCXwQJwLrBYXMwhfEsa[\s\S]*?<\/iframe>/g) || []).length;
-if (ghlFrameCount !== 1) fail("index.html", `expected one GHL iframe, found ${ghlFrameCount}`);
-if (home.includes("data-ghl-lazy")) fail("index.html", "primary GHL form must not be lazy-loaded");
-if (!home.includes("data-ghl-form")) fail("index.html", "primary GHL form marker is missing");
-if (!home.includes('class="form-fallback"')) fail("index.html", "visible form fallback is missing");
+if (ghlFrameCount !== 0) fail("index.html", `expected no GHL iframe after contact-page consolidation, found ${ghlFrameCount}`);
+if (!home.includes('class="hero__contact-card"')) fail("index.html", "first-party contact path card is missing");
 if (!home.includes('class="mobile-action-bar"')) fail("index.html", "mobile Call/Text action bar is missing");
 for (const target of ["installation.html", "repair.html", "openers.html"]) {
   if (!home.includes(`href="${target}"`)) fail("index.html", `homepage service card is missing ${target}`);
@@ -73,6 +71,8 @@ if (!home.includes('href="contact.html"')) fail("index.html", "homepage is missi
 const contact = readFileSync(join(root, "contact.html"), "utf8");
 const contactGhlFrameCount = (contact.match(/<iframe[\s\S]*?bKCXwQJwLrBYXMwhfEsa[\s\S]*?<\/iframe>/g) || []).length;
 if (contactGhlFrameCount !== 1) fail("contact.html", `expected one GHL iframe, found ${contactGhlFrameCount}`);
+if (!contact.includes("data-ghl-form")) fail("contact.html", "primary GHL form marker is missing");
+if (!contact.includes('class="form-fallback"')) fail("contact.html", "visible form fallback is missing");
 if (!contact.includes('href="https://calendly.com/alphaonegrp/service" target="_blank" rel="noopener"')) fail("contact.html", "missing new-tab scheduler link");
 if (!contact.includes("1311 S Addison Ave")) fail("contact.html", "missing canonical location");
 
