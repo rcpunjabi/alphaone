@@ -9,7 +9,7 @@
   })(window,document,'script','dataLayer','GTM-TL54H6R2');</script>
   <!-- End Google Tag Manager -->
   <meta charset="utf-8">
-  <meta name="site-release" content="20261107-seo-aeo">
+  <meta name="site-release" content="20261107-links">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Contact Alpha One Garage Door Service | Free Estimate</title>
   <meta name="description" content="Contact Alpha One Garage Door Service for a free estimate, 24/7 garage door repair, installation, openers, and commercial service in Lombard and Chicagoland. Call (630) 835-0008.">
@@ -18,7 +18,7 @@
   <link rel="icon" type="image/png" href="assets/logo-a.png">
   <link rel="preload" href="assets/fonts/saira-600-900-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="assets/fonts/barlow-400-latin.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="css/site.min.css?v=20260830-performance">
+  <link rel="stylesheet" href="css/site.min.css?v=20261107-links">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -55,7 +55,7 @@
       <div class="header__cta">
         <a class="header__phone" href="tel:+16308350008"><div><span class="header__phone-label">Call 24/7</span><span>(630) 835-0008</span></div></a>
         <a class="btn btn--primary btn--sm" href="https://calendly.com/alphaonegrp/service" target="_blank" rel="noopener"><span>Book Online</span></a>
-        <button class="nav-toggle" aria-label="Open menu" data-drawer-open><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h16"></path><path d="M4 6h16"></path><path d="M4 18h16"></path></svg></button>
+        <button type="button" class="nav-toggle" aria-label="Open menu" aria-controls="site-menu" aria-expanded="false" data-drawer-open><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h16"></path><path d="M4 6h16"></path><path d="M4 18h16"></path></svg></button>
       </div>
     </div>
   </header>
@@ -69,7 +69,7 @@
       </div>
     </section>
 
-    <section class="section section--bone" id="estimate">
+    <section class="section section--bone">
       <div class="container contact-page__grid" style="max-width:1240px;">
         <div class="contact-page__details">
           <div>
@@ -102,7 +102,7 @@
           </div>
         </div>
 
-        <div class="contact-page__form">
+        <div class="contact-page__form" id="estimate">
           <div class="contact-page__form-head">
             <span class="badge badge--emergency">Free estimate · No obligation</span>
             <h2>Request your estimate</h2>
@@ -144,23 +144,23 @@
     <section class="section" id="services">
       <div class="container" style="max-width:1240px;">
         <div class="section-head" style="max-width:760px;">
-          <span class="eyebrow">Quick Service Preview</span>
+          <span class="eyebrow">Explore Services</span>
           <h2>Choose what you need help with.</h2>
-          <p>Preview the most common requests, then open the full service page or send the estimate form above.</p>
+          <p>Choose a service to see the details, or use the estimate form above to describe your project.</p>
         </div>
         <div class="contact-services__grid">
-          <article class="service-card">
+          <a class="service-card" href="installation.html">
             <div class="photo-slot photo media-image media-installation"></div>
-            <div class="body"><h3>Installation &amp; Replacement</h3><p>New residential and commercial doors, replacements, styles, sizes, and options.</p><div class="service-card__actions"><button type="button" class="service-card__preview" data-service-open="install">Quick preview</button><a class="service-card__details" href="installation.html">View installation details</a></div></div>
-          </article>
-          <article class="service-card">
+            <div class="body"><h3>Installation &amp; Replacement</h3><p>New residential and commercial doors, replacements, styles, sizes, and options.</p><div class="service-card__actions"><span class="service-card__details">View installation details</span></div></div>
+          </a>
+          <a class="service-card" href="repair.html">
             <div class="photo-slot photo media-image media-repair"></div>
-            <div class="body"><h3>Garage Door Repair</h3><p>Broken springs, stuck doors, tracks, cables, panels, and urgent safety problems.</p><div class="service-card__actions"><button type="button" class="service-card__preview" data-service-open="repair">Quick preview</button><a class="service-card__details" href="repair.html">View repair details</a></div></div>
-          </article>
-          <article class="service-card">
+            <div class="body"><h3>Garage Door Repair</h3><p>Broken springs, stuck doors, tracks, cables, panels, and urgent safety problems.</p><div class="service-card__actions"><span class="service-card__details">View repair details</span></div></div>
+          </a>
+          <a class="service-card" href="openers.html">
             <div class="photo-slot photo media-image media-openers"></div>
-            <div class="body"><h3>Openers &amp; Access</h3><p>Reliable opener repair, replacement, smart access, and new installations.</p><div class="service-card__actions"><button type="button" class="service-card__preview" data-service-open="opener">Quick preview</button><a class="service-card__details" href="openers.html">View opener details</a></div></div>
-          </article>
+            <div class="body"><h3>Openers &amp; Access</h3><p>Reliable opener repair, replacement, smart access, and new installations.</p><div class="service-card__actions"><span class="service-card__details">View opener details</span></div></div>
+          </a>
         </div>
       </div>
     </section>
@@ -206,31 +206,15 @@
     <a class="mobile-action-bar__text" href="sms:+16308350008">Text a Photo</a>
   </nav>
 
-  <div class="drawer" data-drawer>
+  <div class="drawer" id="site-menu" role="dialog" aria-label="Site navigation" aria-modal="true" aria-hidden="true" tabindex="-1" data-drawer>
     <div class="drawer__top">
       <img src="assets/logo-b-640.webp" width="640" height="164" alt="Alpha One Garage Door Service" loading="lazy">
-      <button class="drawer__close" aria-label="Close menu" data-drawer-close><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg></button>
+      <button type="button" class="drawer__close" aria-label="Close menu" data-drawer-close><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg></button>
     </div>
     <nav><a href="index.html#top" data-drawer-close>Home</a><a href="index.html#services" data-drawer-close>Services</a><a href="commercial.html" data-drawer-close>Commercial</a><a href="service-area.html" data-drawer-close>Service Area</a><a href="about.html" data-drawer-close>About</a><a href="blog.html" data-drawer-close>Blog</a><a href="contact.html" data-drawer-close>Contact</a></nav>
     <div class="drawer__foot"><a class="btn btn--primary" href="tel:+16308350008" style="width:100%;justify-content:center;"><span>Call (630) 835-0008</span></a></div>
   </div>
 
-  <div class="modal" data-modal>
-    <div class="modal__panel">
-      <div class="photo-slot modal__photo" data-modal-photo></div>
-      <div class="modal__body">
-        <button class="modal__close" aria-label="Close" data-modal-close><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg></button>
-        <span class="badge badge--emergency">Same-day available</span>
-        <h3 data-modal-title></h3>
-        <p data-modal-body></p>
-        <div style="display:flex;gap:12px;margin-top:18px;flex-wrap:wrap;">
-          <a class="btn btn--primary" href="contact.html" data-modal-primary data-modal-close><span data-modal-primary-label>Request Estimate</span></a>
-          <a class="btn btn--ghost" href="installation.html" data-modal-details><span data-modal-details-label>View Full Details</span></a>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <script src="js/main.min.js?v=20260830-performance"></script>
+  <script src="js/main.min.js?v=20261107-links"></script>
 </body>
 </html>

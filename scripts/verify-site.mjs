@@ -23,8 +23,25 @@ for (const file of htmlFiles) {
   if (mainCount !== 1) fail(file, `expected one main landmark, found ${mainCount}`);
   if (source.includes("BBB A+")) fail(file, "contains unverified BBB A+ claim");
   if ((source.match(/GTM-TL54H6R2/g) || []).length !== 2) fail(file, "expected GTM head and noscript snippets");
-  if (!source.includes("css/site.min.css?v=20260830-performance")) fail(file, "missing current CSS cache key");
-  if (!source.includes("js/main.min.js?v=20260830-performance")) fail(file, "missing current JavaScript cache key");
+  if (!source.includes("css/site.min.css?v=20261107-links")) fail(file, "missing current CSS cache key");
+  if (!source.includes("js/main.min.js?v=20261107-links")) fail(file, "missing current JavaScript cache key");
+  if (source.includes("data-service-open") || source.includes("data-modal")) fail(file, "service navigation must use native links");
+
+  for (const match of source.matchAll(/<a\b[^>]*>/gi)) {
+    const tag = match[0];
+    const href = /\bhref="([^"]+)"/i.exec(tag)?.[1]?.replaceAll("&amp;", "&");
+    if (!href || href === "#" || /^javascript:/i.test(href)) { fail(file, "inert anchor"); continue; }
+    const target = /\btarget="([^"]+)"/i.exec(tag)?.[1];
+    const rel = (/\brel="([^"]+)"/i.exec(tag)?.[1] || "").split(/\s+/);
+    const destination = new URL(href, `https://www.alphaonegarage.com/${file}`);
+    const webLink = /^https?:$/.test(destination.protocol);
+    const internal = ["www.alphaonegarage.com", "alphaonegarage.com"].includes(destination.hostname);
+    if (webLink && !internal) {
+      if (target !== "_blank" || !rel.includes("noopener")) fail(file, `external link must open safely in a new tab: ${href}`);
+    } else if (target && !["_self", "_top", "_parent"].includes(target)) {
+      fail(file, `internal and contact links must keep the current context: ${href}`);
+    }
+  }
 
   for (const match of source.matchAll(/<script\s+type="application\/ld\+json">([\s\S]*?)<\/script>/gi)) {
     try {

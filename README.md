@@ -57,7 +57,7 @@ Current service mappings are defined in `css/site.css`:
 - `.media-maintenance` -> `service-maintenance.svg`
 - `.media-about` -> `pillars-shop.svg`
 
-The homepage service popups reuse these same media classes through `js/main.js`.
+The homepage and contact-page service cards use these same media classes and link directly to the service pages. Navigation links work without popup handlers. Internal links stay in the current tab; external website links open in a new tab with `noopener`.
 
 Source Drive folder for the approved illustration set:
 
@@ -96,7 +96,8 @@ Before packaging, check:
 - Homepage desktop and mobile portrait.
 - `Our Mission` section on portrait mobile.
 - Hero contact form.
-- Homepage service popups.
+- Homepage/contact service-card navigation and the installation/commercial estimate links.
+- Mobile menu opening, scrolling, keyboard focus, and closing.
 - Service page hero illustrations.
 
 ## GEO and structured data

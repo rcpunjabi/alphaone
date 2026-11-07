@@ -1,7 +1,7 @@
 {
-  "release": "20261107-seo-aeo",
-  "scope": "SEO content, service answers, local-page navigation, structured data, and sitemap footer links",
-  "baselineCommit": "48567af7de4dd5f985725127831d36b8690fbbcb",
+  "release": "20261107-links",
+  "scope": "Native service-card navigation, direct installation and commercial estimate form links, consistent link targets, and accessible mobile navigation",
+  "baselineCommit": "934f61ce90cb20362b8e6f1925529594ea5b14ad",
   "preservedIntegrations": {
     "gtm": "GTM-TL54H6R2",
     "ghlForm": "bKCXwQJwLrBYXMwhfEsa",
