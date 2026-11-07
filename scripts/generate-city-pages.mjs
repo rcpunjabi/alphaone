@@ -2,29 +2,53 @@ import { writeFileSync } from "node:fs";
 
 const cities = [
   {
-    slug: "lombard-garage-door-service",
-    name: "Lombard",
-    region: "IL",
-    postal: "60148",
-    intro: "Alpha One Garage Door Service is based in Lombard and serves local homes and businesses with garage door installation, repair, opener, maintenance, and 24/7 emergency service.",
-    localNote: "Lombard is our home base. Call for help with a stuck door, broken spring, opener problem, planned replacement, or commercial overhead door.",
+    "slug": "lombard-garage-door-service",
+    "name": "Lombard",
+    "region": "IL",
+    "postal": "60148",
+    "intro": "Alpha One Garage Door Service is based in Lombard and serves local homes and businesses with garage door installation, repair, opener, maintenance, and 24/7 emergency service.",
+    "localNote": "Lombard is our home base. Call for help with a stuck door, broken spring, opener problem, planned replacement, or commercial overhead door.",
+    "guidanceTitle": "Garage door help from our Lombard base",
+    "guidanceHtml": "<p>Alpha One is based at 1311 S Addison Ave, Lombard, IL 60148. For a stuck door, broken spring, or urgent repair, <a href=\"tel:+16308350008\">call (630) 835-0008</a>. You can also <a href=\"sms:+16308350008\">text a photo</a> and describe what the door is doing.</p><p>Planning a replacement or commercial project? Use the <a href=\"contact.html\">written-estimate form</a> to share the type of work you need. Our <a href=\"installation.html\">installation page</a> explains the consultation, measurements, door selection, and installation process.</p>",
+    "faqs": [
+      [
+        "Where is Alpha One based?",
+        "Alpha One Garage Door Service is based at 1311 S Addison Ave, Lombard, IL 60148, and serves homes and businesses across Lombard and the western suburbs."
+      ]
+    ]
   },
   {
-    slug: "glen-ellyn-garage-door-service",
-    name: "Glen Ellyn",
-    region: "IL",
-    postal: "60137 and 60138",
-    intro: "Alpha One Garage Door Service serves Glen Ellyn homes and businesses with garage door installation, repair, opener, maintenance, and 24/7 emergency service.",
-    localNote: "From planned door replacements to urgent repairs, Glen Ellyn customers can call one local team for residential and commercial garage door work.",
+    "slug": "glen-ellyn-garage-door-service",
+    "name": "Glen Ellyn",
+    "region": "IL",
+    "postal": "60137 and 60138",
+    "intro": "Alpha One Garage Door Service serves Glen Ellyn homes and businesses with garage door installation, repair, opener, maintenance, and 24/7 emergency service.",
+    "localNote": "From planned door replacements to urgent repairs, Glen Ellyn customers can call one local team for residential and commercial garage door work.",
+    "guidanceTitle": "Plan your Glen Ellyn repair or replacement",
+    "guidanceHtml": "<p>Glen Ellyn service coverage includes ZIP codes 60137 and 60138. Share your ZIP code and whether you need a repair, replacement, opener, or commercial service when you <a href=\"contact.html\">request an estimate</a>.</p><p>For a new door, compare the available <a href=\"installation.html\">materials, insulation, styles, and installation process</a>. A new door can also be paired with a compatible <a href=\"openers.html\">garage door opener</a>. For a door that will not open or close, call rather than waiting for a written estimate.</p>",
+    "faqs": [
+      [
+        "Can you install a door and opener together in Glen Ellyn?",
+        "Yes. Alpha One can pair a new garage door with a matched opener and install the related hardware and safety sensors. The process starts with a consultation and measurements."
+      ]
+    ]
   },
   {
-    slug: "wheaton-garage-door-service",
-    name: "Wheaton",
-    region: "IL",
-    postal: "60187 and 60189",
-    intro: "Alpha One Garage Door Service serves Wheaton homes and businesses with garage door installation, repair, opener, maintenance, and 24/7 emergency service.",
-    localNote: "Wheaton customers can call for broken springs, off-track doors, opener issues, preventive maintenance, new doors, and commercial garage door service.",
-  },
+    "slug": "wheaton-garage-door-service",
+    "name": "Wheaton",
+    "region": "IL",
+    "postal": "60187 and 60189",
+    "intro": "Alpha One Garage Door Service serves Wheaton homes and businesses with garage door installation, repair, opener, maintenance, and 24/7 emergency service.",
+    "localNote": "Wheaton customers can call for broken springs, off-track doors, opener issues, preventive maintenance, new doors, and commercial garage door service.",
+    "guidanceTitle": "Compare repair and replacement in Wheaton",
+    "guidanceHtml": "<p>Wheaton service coverage includes ZIP codes 60187 and 60189. If a single component has failed and the door is otherwise sound, a <a href=\"repair.html\">garage door repair</a> may be worth considering. Significant door damage or several failing components may make <a href=\"installation.html\">replacement</a> worth discussing.</p><p>Read our <a href=\"blog-repair-or-replace.html\">repair-or-replace guide</a>, then <a href=\"contact.html\">request an assessment or estimate</a> for your door. For urgent trouble, call (630) 835-0008 and describe what is happening. Availability depends on the location and type of work.</p>",
+    "faqs": [
+      [
+        "How do I decide between repair and replacement in Wheaton?",
+        "Consider the condition of the door and whether the problem is one component or several. A technician can inspect the system and explain the repair and replacement options before you approve work."
+      ]
+    ]
+  }
 ];
 
 const services = [
@@ -60,7 +84,7 @@ const footer = `
         <div class="footer__col"><h3>Company</h3><ul><li><a href="about.html">About</a></li><li><a href="service-area.html">Service Area</a></li><li><a href="blog.html">Blog</a></li><li><a href="contact.html">Contact</a></li></ul></div>
         <div class="footer__col"><h3>Get In Touch</h3><div class="footer__contact"><strong><a href="tel:+16308350008" style="text-decoration:none;">(630) 835-0008</a></strong><br><a href="mailto:info@alphaonegarage.com" style="text-decoration:none;">info@alphaonegarage.com</a><br><a href="https://www.google.com/maps/search/?api=1&amp;query=Alpha+One+Garage+Door+Service+1311+S+Addison+Ave+Lombard+IL+60148" target="_blank" rel="noopener" style="text-decoration:none;">1311 S Addison Ave<br>Lombard, IL 60148</a><br><strong>Open 24/7</strong></div></div>
       </div>
-      <div class="footer__bottom"><small>© 2026 Alpha One Garage Door Service · All rights reserved</small><small>Privacy · Terms · Sitemap</small></div>
+      <div class="footer__bottom"><small>© 2026 Alpha One Garage Door Service · All rights reserved</small><small><a href="sitemap.xml" style="color:inherit;">Sitemap</a></small></div>
     </div>
   </footer>`;
 
@@ -68,9 +92,10 @@ function page(city) {
   const otherCities = cities.filter((item) => item.slug !== city.slug).map((item) => `<a class="btn btn--ghost" href="${item.slug}.html"><span>${item.name}</span></a>`).join("\n        ");
   const faqs = [
     [`What garage door services do you provide in ${city.name}?`, `Alpha One provides garage door installation and replacement, repair, opener service, maintenance and tune-ups, commercial garage door service, and 24/7 emergency service in ${city.name}.`],
-    [`Do you offer emergency garage door service in ${city.name}?`, `Yes. Alpha One advertises 24/7 emergency garage door service. Call (630) 835-0008 when a door cannot wait.`],
+    [`Do you offer emergency garage door service in ${city.name}?`, `Yes. Alpha One provides 24/7 emergency garage door service. Call (630) 835-0008 when a door cannot wait.`],
     ["Can I request a free estimate?", "Yes. You can book a free estimate online or call (630) 835-0008 to discuss the door, opener, repair, or replacement you need."],
     ["Do you work on residential and commercial garage doors?", "Yes. Alpha One installs, repairs, and maintains garage doors for both homes and businesses."],
+    ...city.faqs,
   ];
   const faqJson = faqs.map(([question, answer]) => ({"@type": "Question", name: question, acceptedAnswer: {"@type": "Answer", text: answer}}));
   const faqHtml = faqs.map(([question, answer]) => `
@@ -113,6 +138,7 @@ function page(city) {
   })(window,document,'script','dataLayer','GTM-TL54H6R2');</script>
   <!-- End Google Tag Manager -->
   <meta charset="utf-8">
+  <meta name="site-release" content="20261107-seo-aeo">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Garage Door Service in ${city.name}, IL | Alpha One Garage Door Service</title>
   <meta name="description" content="Garage door installation, repair, openers, maintenance, commercial service, and 24/7 emergency help in ${city.name}, IL. Call Alpha One at (630) 835-0008.">
@@ -124,7 +150,7 @@ function page(city) {
   <meta property="og:url" content="https://www.alphaonegarage.com/${city.slug}.html">
   <meta property="og:image" content="https://www.alphaonegarage.com/assets/logo-a-640.webp">
   <link rel="icon" type="image/png" href="assets/logo-a.png">
-  <link rel="stylesheet" href="css/site.min.css?v=20260830-contact-page">
+  <link rel="stylesheet" href="css/site.min.css?v=20260830-performance">
   <script type="application/ld+json">${JSON.stringify(schema, null, 2)}</script>
 </head>
 <body id="top">
@@ -177,9 +203,16 @@ function page(city) {
       </div>
     </section>
 
+    <section class="section section--bone" style="padding:64px 0;">
+      <div class="container" style="max-width:920px;">
+        <div class="section-head"><span class="eyebrow">Plan Your Service</span><h2>${city.guidanceTitle}</h2></div>
+        <div style="font-family:var(--font-body);font-size:17px;line-height:1.7;">${city.guidanceHtml}</div>
+      </div>
+    </section>
+
     <section class="section" style="padding:80px 0;">
       <div class="container" style="max-width:920px;">
-        <div class="section-head"><span class="eyebrow">${city.name} FAQ</span><h2>Common questions, clear answers</h2><p>These answers summarize the services and contact paths published on this website.</p></div>
+        <div class="section-head"><span class="eyebrow">${city.name} FAQ</span><h2>Common questions, clear answers</h2><p>Find the right service and the best way to reach us for your door.</p></div>
         <div style="display:grid;gap:14px;">${faqHtml}
         </div>
       </div>
@@ -189,7 +222,7 @@ function page(city) {
       <div class="container" style="max-width:920px;text-align:center;">
         <span class="eyebrow" style="justify-content:center;">Nearby Service Areas</span>
         <h2 style="margin-bottom:12px;">Based in Lombard, serving the western suburbs</h2>
-        <p style="margin:0 auto 24px;max-width:680px;">${city.name} ZIP codes listed on our service-area page: ${city.postal}. See the full coverage list or explore another core service area.</p>
+        <p style="margin:0 auto 24px;max-width:680px;">We serve ${city.name} ZIP codes ${city.postal}. See the full coverage list or explore another core service area.</p>
         <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;">
           <a class="btn btn--ghost" href="service-area.html"><span>Full service area</span></a>
           ${otherCities}
@@ -213,7 +246,7 @@ ${footer}
     <div class="drawer__foot"><a class="btn btn--primary" href="tel:+16308350008" style="width:100%;justify-content:center;"><span>Call (630) 835-0008</span></a></div>
   </div>
 
-  <script src="js/main.min.js?v=20260830-contact-page"></script>
+  <script src="js/main.min.js?v=20260830-performance"></script>
 </body>
 </html>
 `;
