@@ -1,0 +1,11 @@
+{
+  "release": "20261107-seo-aeo",
+  "scope": "SEO content, service answers, local-page navigation, structured data, and sitemap footer links",
+  "baselineCommit": "48567af7de4dd5f985725127831d36b8690fbbcb",
+  "preservedIntegrations": {
+    "gtm": "GTM-TL54H6R2",
+    "ghlForm": "bKCXwQJwLrBYXMwhfEsa",
+    "booking": "https://calendly.com/alphaonegrp/service"
+  },
+  "serverConfiguration": "Not included in content-only deployment package"
+}
