@@ -6,6 +6,10 @@ Options -MultiViews
   # Preserve certificate validation before enforcing the canonical host.
   RewriteRule ^\.well-known/acme-challenge/ - [L]
 
+  # Retire legacy July 1776 campaign paths forwarded from the GHL domain.
+  RewriteRule ^alpha-one-1776-campaign-funnel/?$ https://www.alphaonegarage.com/1776-offer-ended.html [R=301,L,NE]
+  RewriteRule ^1776campaign(?:/.*)?$ https://www.alphaonegarage.com/1776-offer-ended.html [R=301,L,NE]
+
   # Consolidate legacy URLs that Search Console still sees as 404s.
   RewriteRule ^blog/?$ https://www.alphaonegarage.com/blog.html [R=301,L,NE]
   RewriteRule ^garage-door-services/?$ https://www.alphaonegarage.com/ [R=301,L,NE]

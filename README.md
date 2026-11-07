@@ -6,20 +6,27 @@ Static HTML/CSS/JS website for Alpha One Garage Door Service.
 
 This site is deployed manually through Hostinger hPanel because the Git connection could not be completed while impersonating the client.
 
+### Verified content release: November 7, 2026
+
+The deployed content commit is `7276a60479f6f944358e82b3cc3be9c69356fa6e`, with release marker `20261107-seo-aeo`. Its content-only package contains 16 HTML pages and `site-release.json`. All 17 public files were verified against the package hashes after upload.
+
+That deployment excluded `.htaccess`, CSS, JavaScript, and all other server files. The repository `.htaccess` was subsequently reconciled with an authenticated Hostinger backup as a source-preservation change; this did not change or redeploy the live server configuration.
+
+The live server also contains `estimate-request-received.html` and `1776-offer-ended.html`, which are not in this checkout. Preserve these pages and other server-only files during future releases.
+
 Recommended manual deployment:
 
-1. Build a clean ZIP from the committed repository state:
+1. Inspect the current live file inventory and `.htaccess` before choosing the release scope. Preserve unrelated routing, integrations, and server-only files.
+2. For a content release, build a clean ZIP from the exact reviewed commit with an explicit file list. For example, to reproduce the verified November 7 package:
 
    ```bash
-   git archive --format=zip -o alphaone-upload.zip HEAD
+   git archive --format=zip -o alphaone-content-upload.zip 7276a60479f6f944358e82b3cc3be9c69356fa6e -- '*.html' site-release.json
    ```
 
-2. Upload the full ZIP to Hostinger File Manager.
-3. Extract it inside `public_html`.
-4. Overwrite existing files when prompted.
-5. Clear/purge Hostinger cache if the live site does not update immediately.
+3. Upload or extract only the intended package files directly into `public_html`, replacing the corresponding existing files. Do not delete unrelated server files.
+4. Verify public file hashes and the customer paths after upload. Clear/purge Hostinger cache only if the intended files have not propagated.
 
-Do not upload only changed files unless you are intentionally doing a surgical hotfix. Full ZIP upload has been the most reliable path for this site.
+Use a full-site archive only when the release requires it and the current server rules and server-only files have been reconciled explicitly. Do not treat this repository as a complete inventory of `public_html`, or overwrite live `.htaccess` merely because it appears in an archive.
 
 ## Cache Busting
 
